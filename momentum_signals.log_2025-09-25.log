@@ -1,0 +1,21 @@
+Time                 Symbol       Volume     VolCutoff Criteria
+2025-09-25 09:22:00  TRIGYN       36131      15356.5   50%     LOW VOLUME  profit 
+2025-09-25 09:29:00  RELTD        49555      47495.0   35%     LOW VOLUME  NA
+2025-09-25 09:30:00  BHARATGEAR   65845      33348.0   50%                 LOSS
+2025-09-25 09:30:00  GFLLIMITED   26397      22162.0   50%     LOW VOLUME  LOSS
+2025-09-25 09:35:00  BHAGERIA     23918      21112.35  35%     LOW VOLUME  LOSS
+2025-09-25 09:46:00  TVSELECT     25402      19585.0   50%     LOW VOLUME  profit (not low volume)
+2025-09-25 09:56:00  TALBROAUTO   67952      63217.60000000000640%         NA
+2025-09-25 09:57:00  TEXINFRA     65647      53745.5   50%     LOW VOLUME  profit (not low volume)
+2025-09-25 10:01:00  GOCOLORS     86981      47974.5   50%     LOW VOLUME  LOW VOLUME
+2025-09-25 10:07:00  VGUARD       230769     134623.0  50%                 NA
+2025-09-25 10:09:00  MAXIND       36007      33796.7   35%                 LOSS   (not low volume)
+2025-09-25 10:10:00  FCL          531381     120225.0  50%                 LOSS
+2025-09-25 10:14:00  ATL          73451      67019.75  35%                 profit
+2025-09-25 10:28:00  RAMCOSYS     46048      21941.5   50%     LOW VOLUME  LOW VOLUME
+2025-09-25 10:28:00  BEARDSELL    153447     36613.5   50%     LOW VOLUME  LOW VOLUME
+2025-09-25 10:28:00  HINDCOPPER   2653877    2477174.4 45%                 LOSS
+2025-09-25 10:28:00  MCL          64103      19156.5   50%     LOW VOLUME  LOW VOLUME     
+2025-09-25 11:21:00  METROPOLIS   32155      30677.5   50%     LOW VOLUME  LOW VOLUME               
+2025-09-25 12:40:00  CHEMCON      69753      65248.8   40%                 profit
+2025-09-25 12:50:00  KUANTUM      35182      31912.5   50%     LOW VOLUME  LOW VOLUME     
