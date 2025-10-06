@@ -25,6 +25,7 @@ df_avg["instrument_token"] = df_avg["instrument_token"].astype(str)
 symbols = df_avg["instrument_token"].tolist()
 avg_volume_dict = dict(zip(df_avg["instrument_token"], df_avg["avg_volume"]))
 token_to_symbol = dict(zip(df_avg["instrument_token"], df_avg["tradingsymbol"]))
+day_high_map = {}
 
 # --- Filter high-volume stocks (>20k avg) ---
 symbols = [s for s in symbols if avg_volume_dict[s] >= 20000]
@@ -54,7 +55,7 @@ def safe_quote(kite, batch, retries=3, delay=2):
 
 def volume_threshold(avg_vol, a=2.08e+01, b=0.65):
     threshold = a * (avg_vol ** b)
-    return threshold
+    return round(threshold,0)
 
 # --- Infinite loop for 1-minute candles ---
 count=1
@@ -75,11 +76,12 @@ while True:
         # volume = data['volume']
         symbol = token_to_symbol[token]
         # print(symbol,last_price,volume)
-        candle = {"open": data["ohlc"]["open"], "close": data["last_price"], "volume_1_min": data["volume"], "cummulative_volume": data["volume"],"name":symbol}        
+        candle = {"open": data["ohlc"]["open"], "close": data["last_price"], "volume_1_min": data["volume"], "cummulative_volume": data["volume"],"name":symbol,"high":data["ohlc"]["high"]}        
         if len(stock_data[token]) > 0:
             last_candle = stock_data[token][-1]
             candle["open"] = last_candle["close"]
             candle["volume_1_min"]=candle["cummulative_volume"]-last_candle["cummulative_volume"]
+
 
         stock_data[token].append(candle)    
 
@@ -92,26 +94,33 @@ while True:
                 # volume checks
 
                 avg_volume_of_this_stock=avg_volume_dict[token]
-                avg_volume_curr_check_1=0.5*avg_volume_of_this_stock
-                avg_volume_curr_check_2=0.45*avg_volume_of_this_stock
-                avg_volume_curr_check_3=0.40*avg_volume_of_this_stock
-                avg_volume_curr_check_4=0.35*avg_volume_of_this_stock
+                avg_volume_curr_check_1=round(0.5*avg_volume_of_this_stock,0)
+                avg_volume_curr_check_2=round(0.45*avg_volume_of_this_stock,0)
+                avg_volume_curr_check_3=round(0.40*avg_volume_of_this_stock,0)
+                avg_volume_curr_check_4=round(0.35*avg_volume_of_this_stock,0)
+                turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
+
+                relative_closeness = (c3["high"] -  c3["close"]) / c3["high"]   
+                threshold = 0.01  
+                dayHigh = "yes" if relative_closeness <= threshold else "no"
+
+
 
                 if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_1:
                     print(f"Momentum signal: {c3['name']} Volume : {c3['volume_1_min']} VolumeCondition : {avg_volume_curr_check_1}")
                     # print(f"Momentum signal: {c3['name']} Volume : {c2['volume_1_min']} Volume : {c1['volume_1_min']}")
-                    log_momentum_signal(candle,avg_volume_curr_check_1,1,avg_volume_of_this_stock)
+                    log_momentum_signal(candle,avg_volume_curr_check_1,1,avg_volume_of_this_stock,turnover,dayHigh)
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_2:
-                    log_momentum_signal(candle,avg_volume_curr_check_2,2,avg_volume_of_this_stock)
+                    log_momentum_signal(candle,avg_volume_curr_check_2,2,avg_volume_of_this_stock,turnover,dayHigh)
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_3:
-                    log_momentum_signal(candle,avg_volume_curr_check_3,3,avg_volume_of_this_stock)
+                    log_momentum_signal(candle,avg_volume_curr_check_3,3,avg_volume_of_this_stock,turnover,dayHigh)
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_4:
-                    log_momentum_signal(candle,avg_volume_curr_check_4,4,avg_volume_of_this_stock)
+                    log_momentum_signal(candle,avg_volume_curr_check_4,4,avg_volume_of_this_stock,turnover,dayHigh)
                     print(f"Momentum signal: {c3['name']} Volume : {c3['volume_1_min']} VolumeCondition : {avg_volume_curr_check_4}")              
 
                 avg_volume_curr_check_5=volume_threshold(avg_volume_of_this_stock)
                 if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_5:
-                    log_momentum_signal(candle,avg_volume_curr_check_5,5,avg_volume_of_this_stock)
+                    log_momentum_signal(candle,avg_volume_curr_check_5,5,avg_volume_of_this_stock,turnover,dayHigh)
     # Wait until next minute             
     print(f"Minute End {count} | Time: {datetime.now().strftime('%H:%M:%S')}")
     count=count+1                  
