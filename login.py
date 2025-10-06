@@ -12,7 +12,7 @@ api_secret = os.getenv("API_SECRET")
 kite = KiteConnect(api_key=api_key)
 
 # After login, you get request_token in the redirect URL
-request_token = "PehymzddD7Uvcaf495NUt2vpNQxllvZ8"
+request_token = "9Fa08HBFQhoSguELKyBBcoPwQAFsDM9x"
 # Generate session (exchange request_token for access_token)
 data = kite.generate_session(request_token, api_secret=api_secret)
 
