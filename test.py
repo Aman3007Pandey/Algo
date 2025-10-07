@@ -76,7 +76,7 @@ while True:
         # volume = data['volume']
         symbol = token_to_symbol[token]
         # print(symbol,last_price,volume)
-        candle = {"open": data["ohlc"]["open"], "close": data["last_price"], "volume_1_min": data["volume"], "cummulative_volume": data["volume"],"name":symbol,"high":data["ohlc"]["high"]}        
+        candle = {"open": data["ohlc"]["open"], "close": data["last_price"], "volume_1_min": data["volume"], "cummulative_volume": data["volume"],"name":symbol,"high":data["ohlc"]["high"],"ucl":data["upper_circuit_limit"]}        
         if len(stock_data[token]) > 0:
             last_candle = stock_data[token][-1]
             candle["open"] = last_candle["close"]
@@ -104,7 +104,8 @@ while True:
                 threshold = 0.01  
                 dayHigh = "yes" if relative_closeness <= threshold else "no"
 
-
+                if min(c1["volume_1_min"] and c2["volume_1_min"]) < 1200:
+                    continue
 
                 if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_1:
                     print(f"Momentum signal: {c3['name']} Volume : {c3['volume_1_min']} VolumeCondition : {avg_volume_curr_check_1}")
@@ -115,8 +116,7 @@ while True:
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_3:
                     log_momentum_signal(candle,avg_volume_curr_check_3,3,avg_volume_of_this_stock,turnover,dayHigh)
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_4:
-                    log_momentum_signal(candle,avg_volume_curr_check_4,4,avg_volume_of_this_stock,turnover,dayHigh)
-                    print(f"Momentum signal: {c3['name']} Volume : {c3['volume_1_min']} VolumeCondition : {avg_volume_curr_check_4}")              
+                    log_momentum_signal(candle,avg_volume_curr_check_4,4,avg_volume_of_this_stock,turnover,dayHigh)    
 
                 avg_volume_curr_check_5=volume_threshold(avg_volume_of_this_stock)
                 if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_5:

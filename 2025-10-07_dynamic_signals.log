@@ -1,0 +1,95 @@
+Time                 Symbol       Volume     VolCutoff Criteria   turnover   Days High 
+2025-10-07 09:20:00  MOSCHIP      624584     570671.0  Dynamic   172822.0   yes      
+2025-10-07 09:21:00  ONGC         826176     639010.0  Dynamic   205800.0   yes      
+2025-10-07 09:22:00  TFCILTD      1075824    623000.0  Dynamic   81547.0    yes      
+2025-10-07 09:22:00  INOXGREEN    377783     134333.0  Dynamic   84960.0    yes      
+2025-10-07 09:24:00  CYIENTDLM    62591      53780.0   Dynamic   28992.0    yes      
+2025-10-07 09:25:00  NLCINDIA     258128     254715.0  Dynamic   74857.0    yes      
+2025-10-07 09:25:00  RACLGEAR     18960      17465.0   Dynamic   24629.0    yes      LOW VOLUME
+2025-10-07 09:26:00  INTLCONV     53462      43905.0   Dynamic   6028.0     yes      LOW VOLUME
+2025-10-07 09:27:00  MRPL         534500     373533.0  Dynamic   81859.0    yes      
+2025-10-07 09:30:00  TARACHAND    65967      46319.0   Dynamic   5904.0     yes      LOW VOLUME
+2025-10-07 09:31:00  MCLEODRUSS   374118     167267.0  Dynamic   19406.0    yes      
+2025-10-07 09:31:00  AMDIND       23360      23073.0   Dynamic   1493.0     yes      LOW VOLUME
+2025-10-07 09:31:00  TARACHAND    93624      46319.0   Dynamic   8469.0     yes      LOW VOLUME
+2025-10-07 09:32:00  MCLEODRUSS   403634     167267.0  Dynamic   20957.0    yes      
+2025-10-07 09:32:00  TARACHAND    259075     46319.0   Dynamic   24055.0    no       LOW VOLUME
+2025-10-07 09:34:00  MRPL         683310     373533.0  Dynamic   105298.0   yes      
+2025-10-07 09:35:00  INDBANK      37450      23378.0   Dynamic   1726.0     no       LOW VOLUME
+2025-10-07 09:36:00  SAIL         789781     729851.0  Dynamic   105625.0   yes      
+2025-10-07 09:36:00  ATGL         158018     116343.0  Dynamic   103178.0   yes      
+2025-10-07 09:37:00  SANDUMA      168970     59394.0   Dynamic   33015.0    no       
+2025-10-07 09:38:00  ESTER        52321      50056.0   Dynamic   6174.0     yes      
+2025-10-07 09:39:00  RAMKY        40260      32238.0   Dynamic   25726.0    yes      LOW VOLUME
+2025-10-07 09:41:00  ESTER        62238      50056.0   Dynamic   7525.0     no       
+2025-10-07 09:42:00  ATLANTAA     158552     71665.0   Dynamic   11375.0    no       
+2025-10-07 09:46:00  AAATECH      16794      14179.0   Dynamic   2000.0     no       LOW VOLUME
+2025-10-07 09:47:00  AAATECH      46700      14179.0   Dynamic   5586.0     no       LOW VOLUME
+2025-10-07 09:49:00  ATLANTAA     87017      71665.0   Dynamic   6274.0     yes      
+2025-10-07 10:02:00  FIRSTCRY     1592244    337591.0  Dynamic   593429.0   yes      
+2025-10-07 10:04:00  ESTER        79845      50056.0   Dynamic   9789.0     yes      
+2025-10-07 10:05:00  RAMKY        41949      32238.0   Dynamic   27399.0    yes      LOW VOLUME
+2025-10-07 10:05:00  STALLION     307828     297315.0  Dynamic   91132.0    yes      
+2025-10-07 10:06:00  RAMKY        71681      32238.0   Dynamic   47094.0    yes      LOW VOLUME
+2025-10-07 10:07:00  RAMKY        80599      32238.0   Dynamic   53099.0    yes      LOW VOLUME
+2025-10-07 10:10:00  ESTER        295618     50056.0   Dynamic   37656.0    no       
+2025-10-07 10:14:00  ESTER        188488     50056.0   Dynamic   24145.0    yes      
+2025-10-07 10:15:00  NOCIL        157330     77732.0   Dynamic   29814.0    yes      
+2025-10-07 10:16:00  ESTER        334493     50056.0   Dynamic   44056.0    yes      
+2025-10-07 10:17:00  RAMKY        125167     32238.0   Dynamic   84419.0    yes      LOW VOLUME
+2025-10-07 10:22:00  TVSELECT     29150      20113.0   Dynamic   19880.0    yes      LOW VOLUME
+2025-10-07 10:24:00  TVSELECT     47262      20113.0   Dynamic   32608.0    yes      LOW VOLUME
+2025-10-07 10:25:00  AAATECH      135288     14179.0   Dynamic   15693.0    no       LOW VOLUME
+2025-10-07 10:26:00  INDRAMEDCO   152305     63759.0   Dynamic   77554.0    no       
+2025-10-07 10:26:00  SIGMA        65787      14041.0   Dynamic   3635.0     no       LOW VOLUME
+2025-10-07 10:34:00  RAMKY        109613     32238.0   Dynamic   73901.0    no       LOW VOLUME
+2025-10-07 10:56:00  RAMKY        152914     32238.0   Dynamic   106451.0   yes      LOW VOLUME
+2025-10-07 10:58:00  RAMKY        509868     32238.0   Dynamic   357723.0   yes      LOW VOLUME
+2025-10-07 10:59:00  RHIM         184386     128602.0  Dynamic   88856.0    yes      
+2025-10-07 11:18:00  RHIM         349821     128602.0  Dynamic   174631.0   yes      
+2025-10-07 11:19:00  RHIM         537489     128602.0  Dynamic   268530.0   yes      
+2025-10-07 11:29:00  ADANIPOWER   645398     462603.0  Dynamic   99320.0    yes      
+2025-10-07 11:41:00  LODHA        2705874    234150.0  Dynamic   2985391.0  no       
+2025-10-07 11:43:00  RAMKY        55023      32238.0   Dynamic   37030.0    no       LOW VOLUME
+2025-10-07 11:45:00  RHIM         235990     128602.0  Dynamic   116260.0   no       
+2025-10-07 11:51:00  ADANIPOWER   550916     462603.0  Dynamic   84648.0    no       
+2025-10-07 11:55:00  RHIM         494923     128602.0  Dynamic   248699.0   no       
+2025-10-07 12:05:00  TICL         53009      49535.0   Dynamic   1432.0     yes      
+2025-10-07 12:10:00  SIGMA        18339      14041.0   Dynamic   1024.0     no       LOW VOLUME
+2025-10-07 12:19:00  ARIHANTSUP   23389      15973.0   Dynamic   10522.0    yes      LOW VOLUME
+2025-10-07 12:20:00  ARIHANTSUP   35498      15973.0   Dynamic   16242.0    no       LOW VOLUME
+2025-10-07 12:23:00  SAGCEM       133006     82519.0   Dynamic   33212.0    yes      
+2025-10-07 12:32:00  RAMKY        32266      32238.0   Dynamic   20908.0    no       LOW VOLUME
+2025-10-07 12:40:00  SANDHAR      42548      35899.0   Dynamic   20338.0    no       LOW VOLUME
+2025-10-07 12:44:00  IDEA         34666628   10764293.0Dynamic   313040.0   yes      
+2025-10-07 12:45:00  UNIPARTS     42261      40799.0   Dynamic   19391.0    yes      LOW VOLUME
+2025-10-07 12:55:00  TTML         197858     139749.0  Dynamic   11771.0    yes      
+2025-10-07 12:56:00  ARIHANTSUP   33597      15973.0   Dynamic   14951.0    no       LOW VOLUME
+2025-10-07 13:04:00  IGL          311167     293635.0  Dynamic   68519.0    yes      
+2025-10-07 13:12:00  MINDACORP    88923      74240.0   Dynamic   53518.0    yes      
+2025-10-07 13:17:00  UNIPARTS     46835      40799.0   Dynamic   21781.0    no       LOW VOLUME
+2025-10-07 13:22:00  UNIPARTS     126053     40799.0   Dynamic   59749.0    yes      LOW VOLUME
+2025-10-07 13:42:00  UNIPARTS     118652     40799.0   Dynamic   57131.0    no       LOW VOLUME
+2025-10-07 13:58:00  MUKKA        370620     81623.0   Dynamic   9862.0     no       
+2025-10-07 14:03:00  RBA          190608     183431.0  Dynamic   14296.0    no       
+2025-10-07 14:04:00  PIDILITIND   118796     76658.0   Dynamic   175747.0   yes      
+2025-10-07 14:05:00  GOLDIETF     745011     365842.0  Dynamic   76624.0    no       
+2025-10-07 14:12:00  INDRAMEDCO   78825      63759.0   Dynamic   44493.0    yes      
+2025-10-07 14:13:00  INDRAMEDCO   407898     63759.0   Dynamic   231156.0   no       
+2025-10-07 14:17:00  ARIHANTSUP   24270      15973.0   Dynamic   10354.0    no       LOW VOLUME
+2025-10-07 14:21:00  IGL          321909     293635.0  Dynamic   70566.0    yes      
+2025-10-07 14:21:00  GROWWRAIL    245364     88676.0   Dynamic   8774.0     yes      
+2025-10-07 14:23:00  ATLANTAA     330100     71665.0   Dynamic   24097.0    yes      
+2025-10-07 14:36:00  JBCHEPHARM   103834     56550.0   Dynamic   171534.0   yes      
+2025-10-07 14:38:00  RHIM         444341     128602.0  Dynamic   220482.0   no       
+2025-10-07 14:44:00  IGL          414434     293635.0  Dynamic   91084.0    no       
+2025-10-07 14:46:00  CENTEXT      105980     83034.0   Dynamic   3195.0     yes      
+2025-10-07 14:50:00  RHIM         199497     128602.0  Dynamic   99659.0    no       
+2025-10-07 14:52:00  CONFIPET     198556     99372.0   Dynamic   9551.0     yes      
+2025-10-07 14:52:00  ARIHANTSUP   17484      15973.0   Dynamic   7641.0     no       LOW VOLUME
+2025-10-07 15:01:00  UNIPARTS     40916      40799.0   Dynamic   19026.0    no       LOW VOLUME
+2025-10-07 15:02:00  UNIPARTS     51028      40799.0   Dynamic   23838.0    no       LOW VOLUME
+2025-10-07 15:07:00  VASCONEQ     457767     314384.0  Dynamic   33005.0    yes      
+2025-10-07 15:11:00  TARACHAND    63907      46319.0   Dynamic   5690.0     no       LOW VOLUME
+2025-10-07 15:11:00  RHIM         274619     128602.0  Dynamic   135264.0   no       
+2025-10-07 15:13:00  TICL         104714     49535.0   Dynamic   2995.0     yes      

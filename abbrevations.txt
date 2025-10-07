@@ -1,0 +1,6 @@
+CTUC   ----> Close to Upper Circut 
+PNQ    ----> Pattern Not Qualified 
+LV     ----> Low Volume
+SS    ---->  Single Spike
+NE    ---->  No Entry
+PAT    ----> Position Already Taken

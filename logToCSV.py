@@ -20,6 +20,9 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,avg_volume_of_this_stock,t
     5: "Dynamic"
     }
 
+    potential_gain = ((candle["ucl"] - candle["close"]) / candle["close"]) * 100
+    potential_gain=round(potential_gain,2)
+
     criteria = CRITERIA_MAP.get(fileSuffix, "Unknown")
     suffix = DYNAMIC_LOG_PREFIX if fileSuffix == 5 else LOG_PREFIX
     LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d')}_{suffix}.log"
@@ -28,7 +31,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,avg_volume_of_this_stock,t
 
     if not os.path.exists(LOG_FILE):
         with open(LOG_FILE, "w") as f:
-            f.write(f"{'Time':<20} {'Symbol':<12} {'Volume':<10} {'VolCutoff':<10}" f"{'Criteria':<10} {'turnover':<10} {'Days High':<9} \n")
+            f.write(f"{'Time':<20} {'Symbol':<12} {'Volume':<10} {'VolCutoff':<10}" f"{'Criteria':<10} {'turnover':<10} {'Days High':<9} {'%UC':<5} \n")
     with open(LOG_FILE, "a") as f:
         f.write(
             f"{final_time.strftime('%Y-%m-%d %H:%M:%S'):<20} "
@@ -38,7 +41,8 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,avg_volume_of_this_stock,t
             f"{criteria:<10}"
             f"{turnover:<11}"
             f"{dayHigh:<9}"
-            f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
+            f"{potential_gain:<5}\n"
+            # f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
         )
 
 
