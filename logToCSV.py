@@ -17,14 +17,15 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,avg_volume_of_this_stock,t
     2: "45%",
     3: "40%",
     4: "35%",
-    5: "Dynamic"
+    5: "UHV",
+    6: "Dynamic"
     }
 
     potential_gain = ((candle["ucl"] - candle["close"]) / candle["close"]) * 100
     potential_gain=round(potential_gain,2)
 
     criteria = CRITERIA_MAP.get(fileSuffix, "Unknown")
-    suffix = DYNAMIC_LOG_PREFIX if fileSuffix == 5 else LOG_PREFIX
+    suffix = DYNAMIC_LOG_PREFIX if fileSuffix == 6 else LOG_PREFIX
     LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d')}_{suffix}.log"
     now = datetime.now().replace(second=0, microsecond=0)
     final_time = now - timedelta(minutes=1)
@@ -46,14 +47,4 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,avg_volume_of_this_stock,t
         )
 
 
-# sample_candle = {
-#     "name": "RELIANCE",
-#     "close": 2524.5,
-#     "volume_1_min": 18250
-# }
-
-# log_momentum_signal(sample_candle,20000,1)
-# log_momentum_signal(sample_candle,20000,2)
-# log_momentum_signal(sample_candle,20000,1)
-# log_momentum_signal(sample_candle,20000,1)
 

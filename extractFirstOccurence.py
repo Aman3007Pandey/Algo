@@ -2,6 +2,7 @@ from datetime import datetime
 
 LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d')}_momentum_signals.log.log"
 # LOG_FILE = "2025-10-03_momentum_signals.log.log"
+# LOG_FILE = "2025-10-10_dynamic_signals.log"
 FIRST_HIT_SUFFIX = "firstHits"
 
 seen = set()

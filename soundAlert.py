@@ -1,15 +1,21 @@
 import time
 import os
 import platform
+import winsound
 from datetime import datetime, timedelta
 
 LOG_PREFIX = "momentum_signals.log"
-LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d')}_{LOG_PREFIX}.log" # put today’s log file name here
+LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d')}_{LOG_PREFIX}.log" # put today’s log file name 
+
+# LOG_FILE="2025-10-10_dynamic_signals.log"
 # LOG_FILE="momentum_signals.log2"
-def play_alert():
-        print("reached here")
-        os.system('afplay /System/Library/Sounds/Glass.aiff')  # macOS
+# def play_alert():
+#         print("reached here")
+#         os.system('afplay /System/Library/Sounds/Glass.aiff')  # macOS
         # or Linux: os.system('play -nq -t alsa synth 0.3 sine 1200')
+def play_alert():
+    # Play a simple system beep
+    winsound.MessageBeep()        
 
 def watch_log():
     with open(LOG_FILE, "r") as f:

@@ -9,6 +9,7 @@ from datetime import datetime
 from requests.exceptions import RequestException
 import urllib3
 from logToCSV import log_momentum_signal
+import math
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -53,8 +54,12 @@ def safe_quote(kite, batch, retries=3, delay=2):
                 raise
 
 
-def volume_threshold(avg_vol, a=2.08e+01, b=0.65):
+def volume_threshold_exponent(avg_vol, a=2.08e+01, b=0.65):
     threshold = a * (avg_vol ** b)
+    return round(threshold,0)
+
+def volume_threshold_logarthmic(avg_vol, a=234566.11, b=-2813082.21):
+    threshold = a*math.log(avg_vol)+b
     return round(threshold,0)
 
 # --- Infinite loop for 1-minute candles ---
@@ -104,7 +109,7 @@ while True:
                 threshold = 0.01  
                 dayHigh = "yes" if relative_closeness <= threshold else "no"
 
-                if min(c1["volume_1_min"] and c2["volume_1_min"]) < 1200:
+                if min(c1["volume_1_min"] , c2["volume_1_min"]) < 1200:
                     continue
 
                 if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_1:
@@ -116,11 +121,14 @@ while True:
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_3:
                     log_momentum_signal(candle,avg_volume_curr_check_3,3,avg_volume_of_this_stock,turnover,dayHigh)
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_4:
-                    log_momentum_signal(candle,avg_volume_curr_check_4,4,avg_volume_of_this_stock,turnover,dayHigh)    
-
-                avg_volume_curr_check_5=volume_threshold(avg_volume_of_this_stock)
+                    log_momentum_signal(candle,avg_volume_curr_check_4,4,avg_volume_of_this_stock,turnover,dayHigh)
+        
+                avg_volume_curr_check_5=volume_threshold_logarthmic(avg_volume_of_this_stock)
                 if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_5:
-                    log_momentum_signal(candle,avg_volume_curr_check_5,5,avg_volume_of_this_stock,turnover,dayHigh)
+                    if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=1000000:
+                        log_momentum_signal(candle,1000000,5,avg_volume_of_this_stock,turnover,dayHigh)
+                    else:    
+                        log_momentum_signal(candle,avg_volume_curr_check_5,6,avg_volume_of_this_stock,turnover,dayHigh)
     # Wait until next minute             
     print(f"Minute End {count} | Time: {datetime.now().strftime('%H:%M:%S')}")
     count=count+1                  
