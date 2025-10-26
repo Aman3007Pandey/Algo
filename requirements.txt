@@ -1,0 +1,6 @@
+kiteconnect
+python-dotenv
+pandas
+requests
+urllib3
+pytz

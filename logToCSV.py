@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta
 import os
+import pytz
 
-LOG_PREFIX = "momentum_signals.log"
+LOG_PREFIX = "momentum_signals"
 DYNAMIC_LOG_PREFIX="dynamic_signals"
 VOLUME_LOG_PREFIX="volume_signals"
 
@@ -23,13 +24,15 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
     6: "Dynamic"
     }
 
+    india = pytz.timezone("Asia/Kolkata")
+
     potential_gain = ((candle["ucl"] - candle["close"]) / candle["close"]) * 100
     potential_gain=round(potential_gain,2)
 
     criteria = CRITERIA_MAP.get(fileSuffix, "Unknown")
     suffix = DYNAMIC_LOG_PREFIX if fileSuffix == 6 else VOLUME_LOG_PREFIX if fileSuffix == 0 else LOG_PREFIX
-    LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d')}_{suffix}.log"
-    now = datetime.now().replace(second=0, microsecond=0)
+    LOG_FILE = f"{datetime.now(india).strftime('%Y-%m-%d')}_{suffix}.log"
+    now = datetime.now(india).replace(second=0, microsecond=0)
     final_time = now - timedelta(minutes=1)
 
     if not os.path.exists(LOG_FILE):
