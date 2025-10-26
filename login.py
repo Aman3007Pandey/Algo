@@ -7,12 +7,12 @@ import os
 load_dotenv()
 api_key = os.getenv("API_KEY")
 api_secret = os.getenv("API_SECRET")
-
+login_token=os.getenv("LOGIN_TOKEN")
 
 kite = KiteConnect(api_key=api_key)
 
 # After login, you get request_token in the redirect URL
-request_token = "6uxWnblZbrVH0LYnaE8m3vOu5HvdDZ77"
+request_token = login_token
 # Generate session (exchange request_token for access_token)
 data = kite.generate_session(request_token, api_secret=api_secret)
 
