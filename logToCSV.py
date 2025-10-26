@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 import os
 import pytz
 
+FOLDER_PATH="today_logs"
 LOG_PREFIX = "momentum_signals"
 DYNAMIC_LOG_PREFIX="dynamic_signals"
 VOLUME_LOG_PREFIX="volume_signals"
@@ -31,7 +32,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
 
     criteria = CRITERIA_MAP.get(fileSuffix, "Unknown")
     suffix = DYNAMIC_LOG_PREFIX if fileSuffix == 6 else VOLUME_LOG_PREFIX if fileSuffix == 0 else LOG_PREFIX
-    LOG_FILE = f"{datetime.now(india).strftime('%Y-%m-%d')}_{suffix}.log"
+    LOG_FILE = f"{FOLDER_PATH}/{datetime.now(india).strftime('%Y-%m-%d')}_{suffix}.log"
     now = datetime.now(india).replace(second=0, microsecond=0)
     final_time = now - timedelta(minutes=1)
 
@@ -51,5 +52,10 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
             # f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
         )
 
+# candle={
+#     "ucl":245,
+#     "close":435,
+#     "name":"AMAN"
+# }
 
-
+# log_momentum_signal(candle,4144141,0,43243,655676,"yes")
