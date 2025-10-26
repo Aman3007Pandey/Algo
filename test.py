@@ -105,7 +105,7 @@ while True:
         if len(stock_data[token]) == 3:
             c1, c2, c3 = stock_data[token]
 
-            log_test_momentum_signal()
+            # log_test_momentum_signal()
             avg_volume_of_this_stock=avg_volume_dict[token]
             current_time = datetime.now(india).time()
             cutoff_time1 = datetime.strptime("10:00", "%H:%M").time()
