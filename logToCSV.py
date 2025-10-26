@@ -52,10 +52,11 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
             # f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
         )
 
-# candle={
-#     "ucl":245,
-#     "close":435,
-#     "name":"AMAN"
-# }
 
-# log_momentum_signal(candle,4144141,0,43243,655676,"yes")
+def log_test_momentum_signal():
+    candle={
+        "ucl":245,
+        "close":435,
+        "name":"AMAN"
+    }
+    log_momentum_signal(candle,4144141,0,43243,655676,"yes")
