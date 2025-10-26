@@ -4,3 +4,5 @@ LV     ----> Low Volume
 SS    ---->  Single Spike
 NE    ---->  No Entry
 PAT    ----> Position Already Taken
+NEM   -----> Not Enough Movement (for short alteast 5% movement)
+TMM   -----> Too Much Movement (Long not after 12-15%)

@@ -3,8 +3,9 @@ import os
 
 LOG_PREFIX = "momentum_signals.log"
 DYNAMIC_LOG_PREFIX="dynamic_signals"
+VOLUME_LOG_PREFIX="volume_signals"
 
-def log_momentum_signal(candle, vol_cutoff,fileSuffix,avg_volume_of_this_stock,turnover,dayHigh):
+def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,dayHigh):
     """
     Logs a momentum signal to a readable text file.
     
@@ -13,6 +14,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,avg_volume_of_this_stock,t
     - volume_condition: bool or string describing volume condition
     """
     CRITERIA_MAP = {
+    0: "UV",    
     1: "50%",
     2: "45%",
     3: "40%",
@@ -25,7 +27,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,avg_volume_of_this_stock,t
     potential_gain=round(potential_gain,2)
 
     criteria = CRITERIA_MAP.get(fileSuffix, "Unknown")
-    suffix = DYNAMIC_LOG_PREFIX if fileSuffix == 6 else LOG_PREFIX
+    suffix = DYNAMIC_LOG_PREFIX if fileSuffix == 6 else VOLUME_LOG_PREFIX if fileSuffix == 0 else LOG_PREFIX
     LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d')}_{suffix}.log"
     now = datetime.now().replace(second=0, microsecond=0)
     final_time = now - timedelta(minutes=1)
@@ -37,11 +39,11 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,avg_volume_of_this_stock,t
         f.write(
             f"{final_time.strftime('%Y-%m-%d %H:%M:%S'):<20} "
             f"{candle['name']:<12} "
-            f"{candle['volume_1_min']:<10} "
+            f"{current_volume:<10} "
             f"{vol_cutoff:<10}"
             f"{criteria:<10}"
             f"{turnover:<11}"
-            f"{dayHigh:<9}"
+            f"{dayHigh if dayHigh is not None else 'NA':<9}"
             f"{potential_gain:<5}\n"
             # f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
         )

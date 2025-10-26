@@ -27,6 +27,7 @@ symbols = df_avg["instrument_token"].tolist()
 avg_volume_dict = dict(zip(df_avg["instrument_token"], df_avg["avg_volume"]))
 token_to_symbol = dict(zip(df_avg["instrument_token"], df_avg["tradingsymbol"]))
 day_high_map = {}
+volume_map = {symbol: 0 for symbol in symbols}
 
 # --- Filter high-volume stocks (>20k avg) ---
 symbols = [s for s in symbols if avg_volume_dict[s] >= 20000]
@@ -85,11 +86,11 @@ while True:
         time.sleep(1)  # respect 3 requests/sec limit
     
     for token, data in all_quotes.items():
-        # last_price = data['last_price']
-        # volume = data['volume']
+      
         symbol = token_to_symbol[token]
-        # print(symbol,last_price,volume)
-        candle = {"open": data["ohlc"]["open"], "close": data["last_price"], "volume_1_min": data["volume"], "cummulative_volume": data["volume"],"name":symbol,"high":data["ohlc"]["high"],"ucl":data["upper_circuit_limit"]}        
+        
+        candle = {"open": data["ohlc"]["open"], "close": data["last_price"], "volume_1_min": data["volume"], "cummulative_volume": data["volume"],"name":symbol,"high":data["ohlc"]["high"],"ucl":data["upper_circuit_limit"]} 
+
         if len(stock_data[token]) > 0:
             last_candle = stock_data[token][-1]
             candle["open"] = last_candle["close"]
@@ -103,35 +104,20 @@ while True:
             c1, c2, c3 = stock_data[token]
 
             avg_volume_of_this_stock=avg_volume_dict[token]
-            current_time = datetime.now().time()
-            cutoff_time1 = datetime.strptime("10:00", "%H:%M").time()
-            cutoff_time2 = datetime.strptime("11:00", "%H:%M").time()
-            cutoff_time3 = datetime.strptime("12:00", "%H:%M").time()
-            cutoff_time4 = datetime.strptime("13:00", "%H:%M").time()
-            if current_time<cutoff_time1 and c3["cummulative_volume"]>avg_volume_of_this_stock and token not in unusualVolumeSymbols:
+            symbol=token_to_symbol[token]
+            current_time = datetime.now().strftime("%H:%M")
+
+            # Update Rolling Volume Map at certain points 
+            if current_time == "10:00" or current_time == "11:00" or current_time == "12:00" or current_time == "13:00" :
+                volume_map[symbol]=c3["cummulative_volume"]
+
+            if c3["cummulative_volume"]-volume_map[symbol]>avg_volume_of_this_stock and token not in unusualVolumeSymbols:
                 turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
                 dayHigh=findIfDayHigh(c3["high"],c3["close"])
                 if turnover>1000 and dayHigh=="yes":
                     log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh)
                     unusualVolumeSymbols.add(token)
-            elif current_time<cutoff_time2 and c3["cummulative_volume"]>2*avg_volume_of_this_stock and token not in unusualVolumeSymbols:
-                turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
-                dayHigh=findIfDayHigh(c3["high"],c3["close"])
-                if turnover>1000 and dayHigh=="yes":
-                    log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh)
-                    unusualVolumeSymbols.add(token)
-            elif current_time<cutoff_time3 and c3["cummulative_volume"]>3*avg_volume_of_this_stock and token not in unusualVolumeSymbols:
-                turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
-                dayHigh=findIfDayHigh(c3["high"],c3["close"])
-                if turnover>1000 and dayHigh=="yes":
-                    log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh)
-                    unusualVolumeSymbols.add(token)
-            elif current_time<cutoff_time4 and c3["cummulative_volume"]>4*avg_volume_of_this_stock and token not in unusualVolumeSymbols:
-                turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
-                dayHigh=findIfDayHigh(c3["high"],c3["close"])
-                if turnover>1000 and dayHigh=="yes":
-                    log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh)
-                    unusualVolumeSymbols.add(token)                         
+                                  
 
 
             
