@@ -39,5 +39,5 @@ jobs:
         with:
           name: logs
           path: |
-            *.log
+            ${{ github.workspace }}/$(date +%Y-%m-%d)_*.log*
           retention-days: 3    
