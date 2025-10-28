@@ -64,9 +64,9 @@ def volume_threshold_logarthmic(avg_vol, a=234566.11, b=-2813082.21):
     return round(threshold,0)
 
 def findIfDayHigh(high,close):
-    relative_closeness = (c3["high"] -  c3["close"]) / c3["high"]   
-    threshold = 0.01  
-    dayHigh = "yes" if relative_closeness <= threshold else "no"
+    relative_closeness = (high -  close) / high  
+    threshold = 0.007  
+    dayHigh = "yes" if relative_closeness <= threshold else "yes" if close>=high else "no"
     return dayHigh
 
 # --- Infinite loop for 1-minute candles ---
