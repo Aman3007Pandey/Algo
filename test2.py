@@ -69,6 +69,14 @@ def findIfDayHigh(high,close):
     dayHigh = "yes" if relative_closeness <= threshold else "no"
     return dayHigh
 
+def zerodhaLink(symbol: str, token: int, exchange: str = "NSE"):
+    """
+    Prints only the symbol as a clickable Zerodha Kite link (no visible URL).
+    Works in VS Code terminal.
+    """
+    url = f"https://kite.zerodha.com/markets/ext/chart/web/tvc/{exchange}/{symbol}/{token}"
+    return url
+
 # --- Infinite loop for 1-minute candles ---
 count=1
 unusualVolumeSymbols=set()
@@ -114,8 +122,9 @@ while True:
             if c3["cummulative_volume"]-volume_map[symbol]>avg_volume_of_this_stock and token not in unusualVolumeSymbols:
                 turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
                 dayHigh=findIfDayHigh(c3["high"],c3["close"])
+                link=zerodhaLink(symbol,token)
                 if turnover>1000 and dayHigh=="yes":
-                    log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh)
+                    log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh,link)
                     unusualVolumeSymbols.add(token)
                                   
 
@@ -131,26 +140,26 @@ while True:
                 avg_volume_curr_check_3=round(0.40*avg_volume_of_this_stock,0)
                 avg_volume_curr_check_4=round(0.35*avg_volume_of_this_stock,0)
                 turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
-
+                link=zerodhaLink(symbol,token)
                 dayHigh=findIfDayHigh(c3["high"],c3["close"])
 
                 if min(c1["volume_1_min"] , c2["volume_1_min"]) < 1200:
                     continue
 
                 if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_1:
-                    print(f"Momentum signal: {c3['name']} Volume : {c3['volume_1_min']} VolumeCondition : {avg_volume_curr_check_1}")
+                    # print(f"Momentum signal: {c3['name']} Volume : {c3['volume_1_min']} VolumeCondition : {avg_volume_curr_check_1}")
                     # print(f"Momentum signal: {c3['name']} Volume : {c2['volume_1_min']} Volume : {c1['volume_1_min']}")
-                    log_momentum_signal(candle,avg_volume_curr_check_1,1,candle["volume_1_min"],turnover,dayHigh)
+                    log_momentum_signal(candle,avg_volume_curr_check_1,1,candle["volume_1_min"],turnover,dayHigh,link)
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_2:
-                    log_momentum_signal(candle,avg_volume_curr_check_2,2,candle["volume_1_min"],turnover,dayHigh)
+                    log_momentum_signal(candle,avg_volume_curr_check_2,2,candle["volume_1_min"],turnover,dayHigh,link)
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_3:
-                    log_momentum_signal(candle,avg_volume_curr_check_3,3,candle["volume_1_min"],turnover,dayHigh)
+                    log_momentum_signal(candle,avg_volume_curr_check_3,3,candle["volume_1_min"],turnover,dayHigh,link)
                 elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_4:
-                    log_momentum_signal(candle,avg_volume_curr_check_4,4,candle["volume_1_min"],turnover,dayHigh)
+                    log_momentum_signal(candle,avg_volume_curr_check_4,4,candle["volume_1_min"],turnover,dayHigh,link)
         
                 avg_volume_curr_check_5=volume_threshold_logarthmic(avg_volume_of_this_stock)
                 if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_5:   
-                        log_momentum_signal(candle,avg_volume_curr_check_5,6,candle["volume_1_min"],turnover,dayHigh)
+                        log_momentum_signal(candle,avg_volume_curr_check_5,6,candle["volume_1_min"],turnover,dayHigh,link)
     # Wait until next minute             
     print(f"Minute End {count} | Time: {datetime.now().strftime('%H:%M:%S')}")
     count=count+1                  

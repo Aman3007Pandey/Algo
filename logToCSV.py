@@ -37,23 +37,38 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
     os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
     now = datetime.now(india).replace(second=0, microsecond=0)
     final_time = now - timedelta(minutes=1)
+    link=zerodhaLink("TCS",2953217)
+
+    # if not os.path.exists(LOG_FILE):
+    #     with open(LOG_FILE, "w") as f:
+    #         f.write(f"{'Time':<20} {'Symbol':<12} {'Volume':<10} {'VolCutoff':<10}" f"{'Criteria':<10} {'turnover':<10} {'Days High':<9} {'%UC':<5} \n")
+    # with open(LOG_FILE, "a") as f:
+    #     f.write(
+    #         f"{final_time.strftime('%Y-%m-%d %H:%M:%S'):<20} "
+    #         f"{candle['name']:<12} "
+    #         f"{current_volume:<10} "
+    #         f"{vol_cutoff:<10}"
+    #         f"{criteria:<10}"
+    #         f"{turnover:<11}"
+    #         f"{dayHigh if dayHigh is not None else 'NA':<9}"
+    #         f"{potential_gain:<5}\n"
+    #         # f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
+    #     )
 
     if not os.path.exists(LOG_FILE):
         with open(LOG_FILE, "w") as f:
-            f.write(f"{'Time':<20} {'Symbol':<12} {'Volume':<10} {'VolCutoff':<10}" f"{'Criteria':<10} {'turnover':<10} {'Days High':<9} {'%UC':<5} \n")
+            f.write(f"{'Time':<10} {'Symbol':<12} {'Volume':<10} {'VolCutoff':<10} {'Turnover':<12} {'%UC':<32} {'Link':<5}\n")
+
     with open(LOG_FILE, "a") as f:
         f.write(
-            f"{final_time.strftime('%Y-%m-%d %H:%M:%S'):<20} "
+            f"{final_time.strftime('%H:%M'):<10} "           # only hour and minute
             f"{candle['name']:<12} "
             f"{current_volume:<10} "
-            f"{vol_cutoff:<10}"
-            f"{criteria:<10}"
-            f"{turnover:<11}"
-            f"{dayHigh if dayHigh is not None else 'NA':<9}"
-            f"{potential_gain:<5}\n"
-            # f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
-        )
-
+            f"{vol_cutoff:<10} "
+            f"{turnover:<10} "
+            f"{potential_gain:<5} "
+            f"{link:<50}\n"
+    )
 
 def log_test_momentum_signal():
     candle={
@@ -62,3 +77,13 @@ def log_test_momentum_signal():
         "name":"AMAN"
     }
     log_momentum_signal(candle,4144141,0,43243,655676,"yes")
+
+def zerodhaLink(symbol: str, token: int, exchange: str = "NSE"):
+    """
+    Prints only the symbol as a clickable Zerodha Kite link (no visible URL).
+    Works in VS Code terminal.
+    """
+    url = f"https://kite.zerodha.com/markets/ext/chart/web/tvc/{exchange}/{symbol}/{token}"
+    return url
+
+# log_test_momentum_signal()
