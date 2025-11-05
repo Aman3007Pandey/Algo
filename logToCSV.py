@@ -7,7 +7,7 @@ LOG_PREFIX = "momentum_signals"
 DYNAMIC_LOG_PREFIX="dynamic_signals"
 VOLUME_LOG_PREFIX="volume_signals"
 
-def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,dayHigh):
+def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,dayHigh,link):
     """
     Logs a momentum signal to a readable text file.
     
@@ -37,7 +37,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
     os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
     now = datetime.now(india).replace(second=0, microsecond=0)
     final_time = now - timedelta(minutes=1)
-    link=zerodhaLink("TCS",2953217)
+ 
 
     # if not os.path.exists(LOG_FILE):
     #     with open(LOG_FILE, "w") as f:
