@@ -10,6 +10,7 @@ from requests.exceptions import RequestException
 import urllib3
 from logToCSV import log_momentum_signal
 import math
+import pytz
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -81,14 +82,15 @@ def zerodhaLink(symbol: str, token: int, exchange: str = "NSE"):
 # --- Infinite loop for 1-minute candles ---
 count=1
 unusualVolumeSymbols=set()
+india = pytz.timezone("Asia/Kolkata")
 
 while True:
     all_quotes = {}
-    now = datetime.now()
+    now = datetime.now(india)
     seconds_to_next_minute = 60 - now.second - now.microsecond / 1_000_000
     time.sleep(seconds_to_next_minute)
     
-    print(f"Minute Start {count} | Time: {datetime.now().strftime('%H:%M:%S')}")
+    print(f"Minute Start {count} | Time: {datetime.now(india).strftime('%H:%M:%S')}")
     for batch in chunk_symbols(symbols, 500):
         quotes = safe_quote(kite,batch)
         all_quotes.update(quotes)
@@ -122,7 +124,7 @@ while True:
 
             avg_volume_of_this_stock=avg_volume_dict[token]
             symbol=token_to_symbol[token]
-            current_time = datetime.now().strftime("%H:%M")
+            current_time = datetime.now(india).strftime("%H:%M")
 
             if c3["cummulative_volume"]-previousVolume>avg_volume_of_this_stock and token not in unusualVolumeSymbols:
                 turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
@@ -133,6 +135,6 @@ while True:
                     unusualVolumeSymbols.add(token)
                                   
     # Wait until next minute             
-    print(f"Minute End {count} | Time: {datetime.now().strftime('%H:%M:%S')}")
+    print(f"Minute End {count} | Time: {datetime.now(india).strftime('%H:%M:%S')}")
     count=count+1                  
     
