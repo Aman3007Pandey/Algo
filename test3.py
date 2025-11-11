@@ -130,8 +130,9 @@ while True:
                 turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
                 dayHigh=findIfDayHigh(c3["high"],c3["close"])
                 link=zerodhaLink(symbol,token)
-                if turnover>1000 and dayHigh=="yes":
-                    # log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh,link)
+                potential_gain = round(((c3["ucl"] - c3["close"]) / c3["close"]) * 100,2)
+                if  potential_gain<19.00 and turnover>1000 and dayHigh=="yes":
+                    log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh,link)
                     unusualVolumeSymbols.add(token)
                                   
     # Wait until next minute             

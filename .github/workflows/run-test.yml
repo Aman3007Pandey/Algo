@@ -1,4 +1,4 @@
-name: Run test.py (KiteConnect bot)
+name: Run test3.py (KiteConnect bot)
 
 on:
   workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
 
       - name: Run your Python script
         run: |
-          python test2.py
+          python test3.py
 
       - name: Upload log files
         if: always()   # ensures upload even if the script fails

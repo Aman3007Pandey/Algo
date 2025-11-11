@@ -1,6 +1,6 @@
 loss=6
-profit=13
-mb=1
+profit=6
+mb=0
 
 brokerage=50
 currentTrade=2000*5
