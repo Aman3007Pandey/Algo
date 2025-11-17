@@ -1,8 +1,8 @@
-loss=6
-profit=6
+loss=14
+profit=5
 mb=0
 
-brokerage=50
+brokerage=20
 currentTrade=2000*5
 maxloss=currentTrade*0.015
 maxProfit=currentTrade*0.03
