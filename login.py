@@ -21,3 +21,24 @@ access_token = data["access_token"]
 kite.set_access_token(access_token)
 
 print("Access token:", access_token)
+
+env_path = ".env"   # change this if needed
+
+# Read existing lines
+lines = []
+with open(env_path, "r") as f:
+    lines = f.readlines()
+
+# Write back with ACCESS_TOKEN replaced/added
+with open(env_path, "w") as f:
+    updated = False
+    for line in lines:
+        if line.startswith("ACCESS_TOKEN="):
+            f.write(f"ACCESS_TOKEN={access_token}\n")
+            updated = True
+        else:
+            f.write(line)
+
+    # If ACCESS_TOKEN was not in the file, add it
+    if not updated:
+        f.write(f"\nACCESS_TOKEN={access_token}\n")

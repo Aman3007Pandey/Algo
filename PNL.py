@@ -1,5 +1,5 @@
-loss=14
-profit=5
+loss=5
+profit=2
 mb=0
 
 brokerage=20

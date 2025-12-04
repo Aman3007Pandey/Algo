@@ -6,3 +6,5 @@ NE    ---->  No Entry
 PAT    ----> Position Already Taken
 NEM   -----> Not Enough Movement (for short alteast 5% movement)
 TMM   -----> Too Much Movement (Long not after 12-15%)
+NIFTY -----> might skip 10 min depending on nigty chart
+PS --------> Potential Chart

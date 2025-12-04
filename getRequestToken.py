@@ -1,6 +1,7 @@
 from kiteconnect import KiteConnect
 from dotenv import load_dotenv
 import os 
+import webbrowser
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -12,3 +13,4 @@ kite = KiteConnect(api_key=api_key)
 
 # This is the URL you must open in your browser
 print(kite.login_url())
+webbrowser.open(kite.login_url())

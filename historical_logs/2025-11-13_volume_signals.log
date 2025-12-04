@@ -3,7 +3,7 @@ Time       Symbol       Volume     VolCutoff  Turnover     %UC                  
 09:17      DATAPATTNS   342617     284369     253398.0   12.18 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DATAPATTNS/1883649   long:loss
 09:19      RKFORGE      513304     471273     71296.0    14.94 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RKFORGE/2921217      long:profit
 09:19      GANDHAR      321181     148507     4541.0     12.27 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GANDHAR/5197569      long:loss
-09:19      ECOSMOBLTY   253375     179701     14135.0    16.22 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ECOSMOBLTY/6415361   long:profitflo
+09:19      ECOSMOBLTY   253375     179701     14135.0    16.22 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ECOSMOBLTY/6415361   long:profit
 09:20      ASIANPAINT   1092495    1060781    279405.0   6.03  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ASIANPAINT/60417     NA:PNQ
 09:20      SANDUMA      525987     207220     22279.0    18.99 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SANDUMA/4699905      NA:NEM 
 09:21      PRECWIRE     161822     149019     4982.0     16.42 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PRECWIRE/695553      long:profit:MB
@@ -79,7 +79,7 @@ Time       Symbol       Volume     VolCutoff  Turnover     %UC                  
 12:16      DHANBANK     880816     607441     1043.0     15.72 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DHANBANK/2907905      NA:LV
 12:21      CANTABIL     259879     121741     29990.0    18.59 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CANTABIL/5160961      NA:LV
 12:33      DSSL         60577      22646      4951.0     11.51 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DSSL/6576641          NA:LV
-12:39      ATL          613282     191485     2956.0     14.29 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ATL/4551169           long:proftit
+12:39      ATL          613282     191485     2956.0     14.29 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ATL/4551169           long:profit
 13:09      BALAJITELE   174880     113139     1460.0     15.24 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BALAJITELE/2344449     ---
 13:13      AIAENG       101954     55101      2245.0     17.65 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AIAENG/3350017        NA:NEM
 13:18      APEX         1038997    401728     4889.0     10.8  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/APEX/5535489          NA:NE
