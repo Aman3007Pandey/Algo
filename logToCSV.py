@@ -37,7 +37,10 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
     os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
     now = datetime.now(india).replace(second=0, microsecond=0)
     final_time = now - timedelta(minutes=1)
- 
+    new_price = (candle["close"] * 101) // 100   # price + 1% buffer
+    money = 10000
+    qty = money // new_price    # floor quantity
+
 
     # if not os.path.exists(LOG_FILE):
     #     with open(LOG_FILE, "w") as f:
@@ -55,15 +58,16 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
     #         # f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
     #     )
 
+
     if not os.path.exists(LOG_FILE):
         with open(LOG_FILE, "w") as f:
-            f.write(f"{'Time':<10} {'Symbol':<12} {'Volume':<10} {'VolCutoff':<10} {'Turnover':<12} {'%UC':<32} {'Link':<5}\n")
+            f.write(f"{'Time':<10} {'Symbol':<12} {'Quantity':<10} {'VolCutoff':<10} {'Turnover':<12} {'%UC':<32} {'Link':<5}\n")
 
     with open(LOG_FILE, "a") as f:
         f.write(
             f"{final_time.strftime('%H:%M'):<10} "           # only hour and minute
             f"{candle['name']:<12} "
-            f"{current_volume:<10} "
+            f"{qty:<10} "
             f"{vol_cutoff:<10} "
             f"{turnover:<10} "
             f"{potential_gain:<5} "
@@ -76,7 +80,7 @@ def log_test_momentum_signal():
         "close":435,
         "name":"AMAN"
     }
-    log_momentum_signal(candle,4144141,0,43243,655676,"yes")
+    # log_momentum_signal(candle,4144141,0,43243,655676,"yes")
 
 def zerodhaLink(symbol: str, token: int, exchange: str = "NSE"):
     """

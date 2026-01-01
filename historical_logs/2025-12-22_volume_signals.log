@@ -1,0 +1,69 @@
+Time       Symbol       Volume     VolCutoff  Turnover     %UC                              Link 
+09:17      WEBELSOLAR   303581     221476     5465.0     16.15 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WEBELSOLAR/3738113         NA:PNQ
+09:17      SANDUMA      403589     207220     43392.0    16.26 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SANDUMA/4699905            NA:PNQ
+09:18      ROLEXRINGS   72467      29551      2883.0     18.61 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ROLEXRINGS/1351425         NA:PNQ
+09:18      DCXINDIA     1201212    1011529    36743.0    17.34 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DCXINDIA/3045121           NA:PNQ
+09:19      QUADFUTURE   1004186    713072     72400.0    10.46 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/QUADFUTURE/7446273         long:profit:MB  
+09:20      HCC          7149471    3867847    9458.0     16.2  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HCC/352001                 NA:PNQ                          short:loss
+09:21      ONEPOINT     433085     418933     2463.0     14.11 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ONEPOINT/2544385           NA:LV
+09:21      JWL          2681008    2561544    87566.0    10.04 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/JWL/5177345                long:profit:MB 
+09:22      DREDGECORP   34372      30442      1598.0     17.97 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DREDGECORP/2885377         NA:PNQ
+09:26      KEC          734346     709335     15876.0    16.42 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KEC/3394561                long:profit
+09:29      BALUFORGE    174385     172317     12272.0    18.12 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BALUFORGE/6043393          NA:PNQ
+09:30      HINDZINC     2483316    2482111    66554.0    7.11  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HINDZINC/364545            ---
+09:33      INTERARCH    28338      28159      5038.0     16.66 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/INTERARCH/6376705          NA:PNQ
+09:34      FCL          319083     240450     1451.0     18.17 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/FCL/1586689                NA:LV  
+09:34      KMEW         88123      84735      14229.0    9.55  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KMEW/6933505               NA:PNQ
+09:35      RRKABEL      118795     114825     7179.0     16.78 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RRKABEL/4752897            long:profit
+09:36      SHRIRAMFIN   6815585    6255594    215504.0   7.47  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SHRIRAMFIN/1102337         long:profit
+09:36      BALAJITELE   150471     113139     2306.0     9.01  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BALAJITELE/2344449         NA:PNQ
+09:38      NIRAJ        179624     28244      2218.0     8.55  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NIRAJ/65281                long:profit 
+
+09:41      BSOFT        1053892    1052420    6395.0     15.53 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BSOFT/1790465
+09:45      KTKBANK      1118422    1009435    55305.0    17.15 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KTKBANK/2061825
+09:45      EMULTIMQ     129266     79289      5236.0     18.19 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/EMULTIMQ/6654977
+09:46      TARIL        1013646    1011859    3704.0     17.84 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TARIL/3884545
+09:49      TAJGVK       532101     530620     4965.0     11.5  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TAJGVK/2394625
+09:49      DOLATALGO    270992     250022     1091.0     15.63 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DOLATALGO/3103745
+09:50      TATAELXSI    142759     140748     16564.0    8.78  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TATAELXSI/873217
+09:51      LLOYDSME     297791     289585     22025.0    16.15 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/LLOYDSME/4432129
+09:51      SCHNEIDER    120758     114722     2586.0     15.75 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SCHNEIDER/7995905
+09:53      KSB          326834     280385     6288.0     13.94 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KSB/498945
+09:53      NIITLTD      442589     393136     6059.0     11.54 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NIITLTD/2949633
+09:57      KEI          244658     244649     12985.0    5.76  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KEI/3407361
+09:57      ABLBL        1267845    1262723    2787.0     18.96 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ABLBL/193751809
+10:04      IIFLCAPS     473516     457126     12483.0    10.66 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IIFLCAPS/3346433
+10:07      NDTV         135770     78365      1099.0     18.75 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NDTV/2925313
+10:08      KNRCON       2489236    2423291    7202.0     11.52 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KNRCON/3912449
+10:09      RITES        608465     602395     2037.0     16.3  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RITES/962817
+10:11      KERNEX       67473      64184      3997.0     15.64 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KERNEX/3358977
+10:12      JKTYRE       640354     597055     26357.0    18.24 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/JKTYRE/3695361
+10:13      RVNL         5728839    5681235    18412.0    5.42  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RVNL/2445313
+10:14      KIRLOSENG    488603     473282     23720.0    13.59 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KIRLOSENG/5359617
+
+10:21      SGFIN        87823      70033      9240.0     17.65 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SGFIN/194266369          NA:LV
+10:24      WALCHANNAG   1476015    115596     8133.0     18.83 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WALCHANNAG/956417        NA:PNQ   
+10:31      STLTECH      4801465    3188258    54173.0    6.39  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/STLTECH/2383105          long:loss
+10:33      JNKINDIA     114074     62040      2936.0     8.47  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/JNKINDIA/6046977         NA:PNQ 
+10:38      APTECHT      97555      59494      3109.0     16.29 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/APTECHT/2753281          NA:PNQ
+10:40      VPRPL        3938838    1206246    6152.0     15.19 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/VPRPL/4695297            NA:PNQ
+10:53      RAJESHEXPO   725543     434911     12929.0    13.27 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RAJESHEXPO/1894657       long;profit:MB
+10:58      GENCON       113391     66865      1347.0     17.5  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GENCON/560129            NA:LV
+10:58      GOLDBEES     28946886   16887903   125795.0   17.9  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GOLDBEES/3693569         NA:NEM
+11:22      CHEMPLASTS   146377     85644      4004.0     9.17  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CHEMPLASTS/1394945       NA:LV
+11:41      LGHL         76592      67051      4062.0     8.99  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/LGHL/5088257             NA:LV 
+11:47      BAYERCROP    75463      29732      306236.0   18.61 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BAYERCROP/4589313        NA:LV
+11:48      RATNAVEER    1309407    341304     68399.0    16.02 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RATNAVEER/4716289        NA:LV 
+11:55      ABSLAMC      695386     302263     1447.0     18.84 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ABSLAMC/1540609          NA:SS
+12:06      UTKARSHBNK   4556212    1434809    18374.0    18.22 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/UTKARSHBNK/4443649       NA:LV 
+12:06      MOCAPITAL    872655     460310     32837.0    18.5  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MOCAPITAL/7696641        NA:LV
+12:12      MODEFENCE    3572768    2161566    102080.0   14.68 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MODEFENCE/6385665        NA:LV 
+12:17      TECH         186443     101380     3883.0     17.53 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TECH/1654273             NA:LV
+12:19      HDFCSML250   1800136    924740     3811.0     17.14 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HDFCSML250/3643649       NA:LV
+12:34      INFOBEAN     279506     201052     4576.0     9.97  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/INFOBEAN/2822913         long:loss
+12:40      BLISSGVS     2183823    1145260    7799.0     16.36 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BLISSGVS/4931841         NA:PNQ 
+12:59      ORIENTHOT    539259     257642     1265.0     17.59 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ORIENTHOT/638209         NA:PNQ
+13:01      IDEAFORGE    787618     547599     18149.0    10.18 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IDEAFORGE/4387841        long:profit:MB
+13:02      HINDCOPPER   21848216   5504832    123275.0   14.32 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HINDCOPPER/4592385       NA:NEM
+13:30      SHILPAMED    130609     60022      3454.0     18.87 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SHILPAMED/4544513        NA:LV
+13:48      BHARATWIRE   742488     184079     5234.0     12.0  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BHARATWIRE/4127489       NA:LV
