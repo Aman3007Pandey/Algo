@@ -7,7 +7,7 @@ LOG_PREFIX = "momentum_signals"
 DYNAMIC_LOG_PREFIX="dynamic_signals"
 VOLUME_LOG_PREFIX="volume_signals"
 
-def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,dayHigh,link):
+def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,dayHighorLow,link):
     """
     Logs a momentum signal to a readable text file.
     
@@ -53,7 +53,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
     #         f"{vol_cutoff:<10}"
     #         f"{criteria:<10}"
     #         f"{turnover:<11}"
-    #         f"{dayHigh if dayHigh is not None else 'NA':<9}"
+    #         f"{dayHighorLow if dayHighorLow is not None else 'NA':<9}"
     #         f"{potential_gain:<5}\n"
     #         # f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
     #     )
@@ -61,7 +61,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
 
     if not os.path.exists(LOG_FILE):
         with open(LOG_FILE, "w") as f:
-            f.write(f"{'Time':<10} {'Symbol':<12} {'Quantity':<10} {'VolCutoff':<10} {'Turnover':<12} {'%UC':<32} {'Link':<5}\n")
+            f.write(f"{'Time':<10} {'Symbol':<12} {'Quantity':<10} {'VolCutoff':<10} {'High/Low':<12} {'%UC':<32} {'Link':<5}\n")
 
     with open(LOG_FILE, "a") as f:
         f.write(
@@ -69,7 +69,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
             f"{candle['name']:<12} "
             f"{qty:<10} "
             f"{vol_cutoff:<10} "
-            f"{turnover:<10} "
+            f"{dayHighorLow:<10} "
             f"{potential_gain:<5} "
             f"{link:<50}\n"
     )

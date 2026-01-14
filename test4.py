@@ -138,10 +138,10 @@ while True:
                 dayLow=findIfDayLow(c3["low"],c3["close"])
                 link=zerodhaLink(symbol,token)
                 potential_gain = round(((c3["ucl"] - c3["close"]) / c3["close"]) * 100,2)
-                if  potential_gain<19.00 and turnover>1000 and dayHigh=="high" :
+                if  potential_gain<18.5 and turnover>4000 and dayHigh=="high" :
                     log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh,link)
                     unusualVolumeSymbols.add(token)
-                elif potential_gain>19.00 and turnover>1000 and dayLow=="low" :
+                elif potential_gain>21.5 and turnover>4000 and dayLow=="low" :
                     log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayLow,link)
                     unusualVolumeSymbols.add(token)
 

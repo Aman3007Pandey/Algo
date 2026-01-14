@@ -31,7 +31,7 @@ jobs:
 
       - name: Run your Python script
         run: |
-          python test3.py
+          python test4.py
 
       - name: Upload log files
         if: always()   # ensures upload even if the script fails
