@@ -108,7 +108,7 @@ while True:
         
         candle = {"open": data["ohlc"]["open"], "close": data["last_price"], "volume_1_min": data["volume"], "cummulative_volume": data["volume"],"name":symbol,"high":data["ohlc"]["high"],"low":data["ohlc"]["low"],"ucl":data["upper_circuit_limit"]} 
 
-        if len(stock_data[token]) > 0:
+        if len(stock_data[token]) > 0:  
             last_candle = stock_data[token][-1]
             candle["open"] = last_candle["close"]
             candle["volume_1_min"]=candle["cummulative_volume"]-last_candle["cummulative_volume"]

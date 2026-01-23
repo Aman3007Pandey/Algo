@@ -11,3 +11,15 @@ before 9:45 short , if stock moves :
         less than 2.5 % => no short
         more than 2.5%-3.5%=> 1-2%
         more than 3.5%-5.0%=> 1.25-2.5%
+
+
+
+
+
+
+
+for really bad day short signal : 
+if stock has not fallen much and position is not PNQ 
+then in that case
+i would like to take short after first consolidation . 
+expect the stock to sweep all consolidated highs in range and then move further . (1.25-2.5) . lets see this one
