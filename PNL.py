@@ -1,4 +1,4 @@
-loss=1
+loss=0
 profit=5
 mb=0
 

@@ -11,6 +11,7 @@ import urllib3
 from logToCSV import log_momentum_signal
 import math
 import pytz
+import sys
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -148,5 +149,9 @@ while True:
                                   
     # Wait until next minute             
     print(f"Minute End {count} | Time: {datetime.now(india).strftime('%H:%M:%S')}")
-    count=count+1                  
+    count=count+1
+
+    if count == 300:
+        print("Reached limit, exiting gracefully")
+        sys.exit(0)                 
     
