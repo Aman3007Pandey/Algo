@@ -151,7 +151,7 @@ while True:
     print(f"Minute End {count} | Time: {datetime.now(india).strftime('%H:%M:%S')}")
     count=count+1
 
-    if count == 300:
+    if count == 2:
         print("Reached limit, exiting gracefully")
         sys.exit(0)                 
     
