@@ -35,7 +35,7 @@ volume_map = {symbol: 0 for symbol in symbols}
 symbols = [s for s in symbols if avg_volume_dict[s] >= 20000]
 
 # --- Initialize rolling data storage ---
-stock_data = {s: deque(maxlen=3) for s in symbols}
+stock_data = {s: deque(maxlen=2) for s in symbols}
 volume_data= {s: deque(maxlen=60) for s in symbols}
 
 # --- Chunk function for 500 symbols ---
@@ -46,7 +46,7 @@ def chunk_symbols(symbols, size=500):
 
 
 
-def safe_quote(kite, batch, retries=3, delay=2):
+def safe_quote(kite, batch, retries=8, delay=2):
     for attempt in range(retries):
         try:
             return kite.quote(batch)
@@ -126,8 +126,8 @@ while True:
                     
 
         # --- Check momentum criteria ---
-        if len(stock_data[token]) == 3:
-            c1, c2, c3 = stock_data[token]
+        if len(stock_data[token]) == 2:
+            c1, c3 = stock_data[token]
 
             avg_volume_of_this_stock=avg_volume_dict[token]
             symbol=token_to_symbol[token]

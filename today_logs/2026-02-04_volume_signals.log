@@ -1,0 +1,104 @@
+Time       Symbol       Quantity   VolCutoff  High/Low     %UC                              Link 
+09:16      LLOYDSME     7.0        289585     high       9.53  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/LLOYDSME/4432129      long:profit
+09:16      TATSILV      370.0      6959738    high       6.86  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TATSILV/5485569       NA:PNQ
+09:17      GRWRHITECH   2.0        72118      high       13.88 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GRWRHITECH/2043393    NA:PNQ
+09:17      GOKEX        12.0       603322     high       7.04  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GOKEX/3015169         long:profit
+09:17      FAZE3Q       18.0       145701     high       0.9   https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/FAZE3Q/3072001        NA:CTUC
+09:17      POKARNA      10.0       125982     high       11.42 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/POKARNA/4518657       FOMO:profit
+09:19      CAMLINFINE   55.0       384966     high       12.94 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CAMLINFINE/1591297    NA:PNQ
+09:19      RAMCOSYS     19.0       43883      high       15.59 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RAMCOSYS/2009857      NA:NE
+09:19      APEX         28         401728     low        23.61 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/APEX/5535489          NA:PNQ
+09:20      MCX          3.0        476918     high       7.37  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MCX/7982337           NA:PNQ
+09:22      ITBEES       250.0      8489741    low        24.99 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ITBEES/4885505        NA:PNQ
+09:24      HDFCAMC      3.0        391036     high       8.3   https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HDFCAMC/1086465       NA:PNQ
+09:26      TMB          16.0       67067      high       16.15 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TMB/2801921           NA:PNQ
+09:26      SANDUMA      43.0       207220     high       17.02 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SANDUMA/4699905       NA:PNQ
+09:27      MMTC         151.0      898992     high       16.5  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MMTC/4596993          NA:PNQ
+09:27      BALUFORGE    22         172317     high       7.27  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BALUFORGE/6043393     NA:PNQ
+09:28      UTKARSHBNK   769.0      1434809    high       18.4  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/UTKARSHBNK/4443649    NA:PNQ
+09:28      HINDCOPPER   15.0       5504832    high       16.39 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HINDCOPPER/4592385    NA:PNQ
+09:28      KSL          12.0       47153      high       11.11 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KSL/4835585           long:profit
+09:29      UNIMECH      9.0        47244      high       2.82  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/UNIMECH/7413761       NA:PNQ
+09:30      SERVOTECH    114.0      615125     high       6.31  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SERVOTECH/1409793     NA:PNQ
+09:30      MRPL         53.0       3507707    high       16.03 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MRPL/584449           NA:PNQ
+09:30      PIDILITIND   6.0        306844     high       8.04  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PIDILITIND/681985     NA:PNQ
+09:30      INTERARCH    4.0        28159      high       18.45 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/INTERARCH/6376705     NA:PNQ
+09:32      NCLIND       52         94871      high       17.24 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NCLIND/3709441        NA:PNQ
+09:33      HINDZINC     15.0       2482111    high       7.92  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HINDZINC/364545       NA:PNQ
+09:33      SUVEN        61.0       138045     high       9.82  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SUVEN/2875649         long:profit:MISSED
+09:33      WEBELSOLAR   133.0      221476     low        22.51 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WEBELSOLAR/3738113    NA:PNQ
+09:35      ICIL         32.0       563193     high       13.81 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ICIL/3068673          NA:NE
+09:35      MAYURUNIQ    16.0       48950      high       16.08 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MAYURUNIQ/7399937     NA:PNQ
+09:36      ROLEXRINGS   76.0       29551      high       15.9  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ROLEXRINGS/1351425    NA:PNQ
+09:36      OIL          19.0       1817949    high       5.47  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/OIL/4464129           NA:PNQ
+09:36      KITEX        44.0       1090373    high       5.43  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KITEX/7398145         NA:PNQ
+09:38      AVANTIFEED   9.0        941541     high       11.59 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AVANTIFEED/2031617    long:profit:MISSED
+09:39      AETHER       9.0        95906      high       18.29 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AETHER/2511361        NA:PNQ
+
+09:40      ARISINFRA    105.0      638251     low        23.68 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ARISINFRA/193949185
+09:41      EXIDEIND     28.0       3000761    high       5.27  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/EXIDEIND/173057
+09:41      HIMATSEIDE   80.0       682818     high       15.89 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HIMATSEIDE/348161
+09:41      KTKBANK      50.0       1009435    high       17.94 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KTKBANK/2061825
+09:42      METAL        833.0      1047927    high       15.03 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/METAL/6590465
+09:44      SOUTHBANK    250.0      7088111    high       17.08 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SOUTHBANK/1522689
+09:45      KKCL         20.0       47765      high       17.75 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KKCL/3425537
+09:45      RPOWER       333.0      15282667   high       12.7  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RPOWER/3906305
+09:46      VPRPL        200.0      1206246    high       11.57 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/VPRPL/4695297
+09:47      PCBL         35.0       824581     low        28.24 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PCBL/678145
+09:47      ADFFOODS     45.0       124172     high       12.96 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ADFFOODS/5058817
+09:49      RALLIS       34         852324     high       13.46 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RALLIS/720897
+09:49      BAJFINANCE   10.0       7719217    high       10.26 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BAJFINANCE/81153
+09:50      STLTECH      78.0       2188258    high       17.23 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/STLTECH/2383105
+09:50      CROMPTON     40.0       2020549    high       5.7   https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CROMPTON/4376065
+09:51      NOCIL        68.0       313480     high       13.1  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NOCIL/625153
+09:51      SELAN        17.0       41715      high       7.91  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SELAN/3481089
+09:52      POLICYBZR    6          1091821    high       10.69 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/POLICYBZR/1703937
+09:53      ADANIPOWER   68.0       4874342    high       17.86 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ADANIPOWER/4451329
+09:53      SHILPAMED    32.0       60022      high       17.02 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SHILPAMED/4544513
+09:54      IOC          57.0       8085170    high       6.87  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IOC/415745
+09:55      IT           250.0      237278     low        24.78 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IT/672513
+09:58      ONGC         37         8012362    high       5.88  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ONGC/633601
+09:58      TARSONS      42.0       58372      high       6.21  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TARSONS/1777409
+09:58      RAIN         59.0       2111840    high       16.65 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RAIN/3926273
+09:59      AVALON       9.0        370788     high       18.43 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AVALON/3854849
+10:00      TIMETECHNO   53.0       1137805    high       18.46 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TIMETECHNO/3764993
+10:00      DIXON        0          274316     high       6.32  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DIXON/5552641
+10:01      KPRMILL      9.0        410503     high       18.49 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KPRMILL/3817473
+10:02      NAZARA       35.0       1629675    low        22.75 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NAZARA/764673
+10:02      WIPRO        42.0       8034469    high       14.12 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WIPRO/969473
+10:02      NMDC         116.0      19194085   high       5.44  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NMDC/3924993
+10:05      HCC          500.0      3867847    high       18.45 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HCC/352001
+10:05      TRIDENT      344.0      10109503   high       16.58 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TRIDENT/2479361
+10:06      PGIL         5.0        123993     high       13.38 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PGIL/3650561
+10:06      SPAL         12.0       51798      high       15.96 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SPAL/4672513
+10:07      MTARTECH     2.0        226400     high       15.84 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MTARTECH/693505
+10:07      SFL          15.0       122729     high       0.98  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SFL/4911105
+10:08      ARVIND       27.0       395773     high       17.42 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ARVIND/49409
+10:10      PFC          24.0       4669261    high       7.11  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PFC/3660545
+10:12      SPORTKING    90.0       271023     high       9.33  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SPORTKING/2747649
+10:12      TARIL        38.0       1011859    high       15.38 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TARIL/3884545
+10:13      WELSPUNLIV   66.0       4755587    high       18.22 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WELSPUNLIV/2880769
+
+10:16      DBREALTY     84.0       846337     high       12.08 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DBREALTY/4639745       long:loss
+10:17      SUNDRMFAST   10.0       103128     low        22.77 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SUNDRMFAST/856321      NA:LV
+10:28      HAPPSTMNDS   25.0       324899     low        27.3  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HAPPSTMNDS/12289       NA:PNQ
+10:29      BECTORFOOD   44.0       106810     low        25.26 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BECTORFOOD/416769      NA:PNQ
+10:29      JKTYRE       17.0       597055     high       15.7  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/JKTYRE/3695361         NA:NE
+10:34      RATNAVEER    61.0       341304     high       15.66 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RATNAVEER/4716289      NA:PNQ
+10:40      IDBI         94.0       7460508    high       16.3  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IDBI/377857            long:profit
+10:48      KAYNES       2.0        570385     high       5.19  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KAYNES/3095553         NA:PNQ
+10:52      GABRIEL      10.0       540853     high       10.75 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GABRIEL/277761         NA:PNQ
+10:52      GTLINFRA     10000.0    50692914   high       0.0   https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GTLINFRA/3518721       NA:LV
+10:56      GTL          1250.0     793121     high       0.71  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GTL/297473             NA:PNQ
+11:06      BLS          35.0       1762530    high       11.12 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BLS/4423425            NA:PNQ
+11:23      JNKINDIA     41.0       62040      high       13.87 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/JNKINDIA/6046977       NA:LV
+11:29      SMCGLOBAL    121.0      76429      high       15.93 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SMCGLOBAL/593921       NA:LV
+11:50      INFOBEAN     11         201052     low        30.2  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/INFOBEAN/2822913       NA:PNQ
+11:56      SIGNATURE    11.0       290236     low        24.04 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SIGNATURE/4798209      NA:SS
+12:15      MOGSEC       158.0      36674      high       4.55  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MOGSEC/385793          NA:LV
+12:27      EUREKAFORB   18.0       176887     low        23.08 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/EUREKAFORB/6441473     NA:PNQ
+12:30      AGIIL        39.0       104124     low        22.05 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AGIIL/6257921          NA:PNQ
+12:43      CASTROLIND   52.0       1534850    high       17.64 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CASTROLIND/320001      NA:PNQ
+12:49      NDTV         111        78365      high       11.07 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NDTV/2925313           NA:LV
+12:57      DEVYANI      80.0       3258174    high       12.83 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DEVYANI/1375489        NA:LV
+
