@@ -19,4 +19,5 @@ symbols = ["NSE:INFY", "NSE:TCS", "NSE:RELIANCE"]
 quotes = kite.quote(symbols)
 
 for s, q in quotes.items():
-    print(f"{s}: LTP = {q['last_price']}, Volume = {q['volume']}")
+    print(q)
+    # print(f"{s}: LTP = {q['last_price']}, Volume = {q['volume']}")
