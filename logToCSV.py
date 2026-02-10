@@ -39,6 +39,10 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
     final_time = now - timedelta(minutes=1)
     new_price = (candle["close"] * 101) // 100   # price + 1% buffer
     money = 10000
+
+    if(new_price<=0):
+        new_price=1
+
     qty = money // new_price    # floor quantity
 
 

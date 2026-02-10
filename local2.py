@@ -8,9 +8,10 @@ import time
 from datetime import datetime
 from requests.exceptions import RequestException
 import urllib3
-from logToCSV import log_momentum_signal
+from logToCSV3 import log_momentum_signal
 import math
 import pytz
+import sys
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -34,7 +35,8 @@ volume_map = {symbol: 0 for symbol in symbols}
 symbols = [s for s in symbols if avg_volume_dict[s] >= 20000]
 
 # --- Initialize rolling data storage ---
-stock_data = {s: deque(maxlen=3) for s in symbols}
+stock_data = {s: deque(maxlen=2) for s in symbols}
+volume_data= {s: deque(maxlen=60) for s in symbols}
 
 # --- Chunk function for 500 symbols ---
 def chunk_symbols(symbols, size=500):
@@ -44,7 +46,7 @@ def chunk_symbols(symbols, size=500):
 
 
 
-def safe_quote(kite, batch, retries=3, delay=2):
+def safe_quote(kite, batch, retries=8, delay=2):
     for attempt in range(retries):
         try:
             return kite.quote(batch)
@@ -65,10 +67,16 @@ def volume_threshold_logarthmic(avg_vol, a=234566.11, b=-2813082.21):
     return round(threshold,0)
 
 def findIfDayHigh(high,close):
-    relative_closeness = (c3["high"] -  c3["close"]) / c3["high"]   
+    relative_closeness = (high -  close) / high   
     threshold = 0.01  
-    dayHigh = "yes" if relative_closeness <= threshold else "no"
+    dayHigh = "high" if relative_closeness <= threshold else "no"
     return dayHigh
+
+def findIfDayLow(low,close):
+    relative_closeness = (close -  low) / low   
+    threshold = 0.01  
+    dayLow = "low" if relative_closeness <= threshold else "no"
+    return dayLow
 
 def zerodhaLink(symbol: str, token: int, exchange: str = "NSE"):
     """
@@ -99,71 +107,51 @@ while True:
       
         symbol = token_to_symbol[token]
         
-        candle = {"open": data["ohlc"]["open"], "close": data["last_price"], "volume_1_min": data["volume"], "cummulative_volume": data["volume"],"name":symbol,"high":data["ohlc"]["high"],"ucl":data["upper_circuit_limit"]} 
+        candle = {"open": data["ohlc"]["open"], "close": data["last_price"], "volume_1_min": data["volume"], "cummulative_volume": data["volume"],"name":symbol,"high":data["ohlc"]["high"],"low":data["ohlc"]["low"],"ucl":data["upper_circuit_limit"]} 
 
-        if len(stock_data[token]) > 0:
+        if len(stock_data[token]) > 0:  
             last_candle = stock_data[token][-1]
             candle["open"] = last_candle["close"]
             candle["volume_1_min"]=candle["cummulative_volume"]-last_candle["cummulative_volume"]
 
         if len(stock_data[token])==0:
             volume_map[symbol]=0
-        stock_data[token].append(candle)    
+
+        stock_data[token].append(candle)
+
+        # Handling rolling volume
+        previousVolume=volume_data[token][0] if len(volume_data[token])==60 else 0
+        volume_data[token].append(candle["cummulative_volume"])
+
+                    
 
         # --- Check momentum criteria ---
-        if len(stock_data[token]) == 3:
-            c1, c2, c3 = stock_data[token]
+        if len(stock_data[token]) == 2:
+            c1, c3 = stock_data[token]
 
             avg_volume_of_this_stock=avg_volume_dict[token]
             symbol=token_to_symbol[token]
             current_time = datetime.now(india).strftime("%H:%M")
 
-            # Update Rolling Volume Map at certain points 
-            if current_time == "10:00" or current_time == "11:00" or current_time == "12:00" or current_time == "13:00" :
-                volume_map[symbol]=c3["cummulative_volume"]
-
-            if c3["cummulative_volume"]-volume_map[symbol]>avg_volume_of_this_stock and token not in unusualVolumeSymbols:
+            if c3["cummulative_volume"]-previousVolume>avg_volume_of_this_stock and token not in unusualVolumeSymbols:
                 turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
                 dayHigh=findIfDayHigh(c3["high"],c3["close"])
+                dayLow=findIfDayLow(c3["low"],c3["close"])
                 link=zerodhaLink(symbol,token)
-                if turnover>1000 and dayHigh=="yes":
-                    log_momentum_signal(candle,avg_volume_of_this_stock,0,c3["cummulative_volume"],turnover,dayHigh,link)
+                potential_gain = round(((c3["ucl"] - c3["close"]) / c3["close"]) * 100,2)
+                if  potential_gain<18.5 and turnover>4000 and dayHigh=="high" :
+                    log_momentum_signal(candle,avg_volume_of_this_stock,0,dayHigh,link,token)
                     unusualVolumeSymbols.add(token)
+                elif potential_gain>21.5 and turnover>4000 and dayLow=="low" :
+                    log_momentum_signal(candle,avg_volume_of_this_stock,0,dayLow,link,token)
+                    unusualVolumeSymbols.add(token)
+
                                   
-
-
-            
-            # 3 green candles
-            if c1["close"] > c1["open"] and c2["close"] > c2["open"] and c3["close"] > c3["open"]:
-                # volume checks
-
-                
-                avg_volume_curr_check_1=round(0.5*avg_volume_of_this_stock,0)
-                avg_volume_curr_check_2=round(0.45*avg_volume_of_this_stock,0)
-                avg_volume_curr_check_3=round(0.40*avg_volume_of_this_stock,0)
-                avg_volume_curr_check_4=round(0.35*avg_volume_of_this_stock,0)
-                turnover=round((c3["volume_1_min"]*c3["close"])/1000,0)
-                link=zerodhaLink(symbol,token)
-                dayHigh=findIfDayHigh(c3["high"],c3["close"])
-
-                if min(c1["volume_1_min"] , c2["volume_1_min"]) < 1200:
-                    continue
-
-                if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_1:
-                    # print(f"Momentum signal: {c3['name']} Volume : {c3['volume_1_min']} VolumeCondition : {avg_volume_curr_check_1}")
-                    # print(f"Momentum signal: {c3['name']} Volume : {c2['volume_1_min']} Volume : {c1['volume_1_min']}")
-                    log_momentum_signal(candle,avg_volume_curr_check_1,1,candle["volume_1_min"],turnover,dayHigh,link)
-                elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_2:
-                    log_momentum_signal(candle,avg_volume_curr_check_2,2,candle["volume_1_min"],turnover,dayHigh,link)
-                elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_3:
-                    log_momentum_signal(candle,avg_volume_curr_check_3,3,candle["volume_1_min"],turnover,dayHigh,link)
-                elif c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_4:
-                    log_momentum_signal(candle,avg_volume_curr_check_4,4,candle["volume_1_min"],turnover,dayHigh,link)
-        
-                avg_volume_curr_check_5=volume_threshold_logarthmic(avg_volume_of_this_stock)
-                if c3["volume_1_min"] > max(c1["volume_1_min"], c2["volume_1_min"]) and c3["volume_1_min"] >=avg_volume_curr_check_5:   
-                        log_momentum_signal(candle,avg_volume_curr_check_5,6,candle["volume_1_min"],turnover,dayHigh,link)
     # Wait until next minute             
     print(f"Minute End {count} | Time: {datetime.now(india).strftime('%H:%M:%S')}")
-    count=count+1                  
+    count=count+1
+
+    if count == 301:
+        print("Reached limit, exiting gracefully")
+        sys.exit(0)                 
     

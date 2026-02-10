@@ -28,29 +28,35 @@ def fetch_last_10_days_ohlc(token:int):
     Returns:
         pd.DataFrame
     """
-    india = pytz.timezone("Asia/Kolkata")
 
-    # 2️⃣ Date range
-    to_date = datetime.now(india).date()
-    from_date = to_date - timedelta(days=10)
+    try:    
+        india = pytz.timezone("Asia/Kolkata")
 
-    # 3️⃣ Fetch historical data
-    data = kite.historical_data(
-        instrument_token=token,
-        from_date=from_date,
-        to_date=to_date,
-        interval="day"
-    )
+        # 2️⃣ Date range
+        to_date = datetime.now(india).date()
+        from_date = to_date - timedelta(days=10)
 
-    # 4️⃣ Convert to DataFrame
-    df = pd.DataFrame(data)
+        # 3️⃣ Fetch historical data
+        data = kite.historical_data(
+            instrument_token=token,
+            from_date=from_date,
+            to_date=to_date,
+            interval="day"
+        )
 
-    ten_day_low = df["low"].min()
-    ten_day_high = df["high"].max()
+        # 4️⃣ Convert to DataFrame
+        df = pd.DataFrame(data)
 
-    # print(ten_day_low,ten_day_high)
-    time.sleep(1)
-    return (ten_day_low,ten_day_high)
+        ten_day_low = df["low"].min()
+        ten_day_high = df["high"].max()
+
+        # print(ten_day_low,ten_day_high)
+        time.sleep(1)
+        return (ten_day_low,ten_day_high)
+
+    except Exception as e:
+        print(f"[WARN] Historical data fetch failed for {token}: {e}")
+        return None, None
 
 
 # fetch_last_10_days_ohlc(2885377)

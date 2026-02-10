@@ -1,0 +1,97 @@
+Time       Resistance Quantity   VolCutoff  High/Low     %UC                              Link 
+09:16      NO         40.0       1621266    high       7.41  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SCI/780289  it went ddwn then up
+09:16      NO         30         54304      high       7.76  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RAMRAT/2684161  it went ddwn then up
+09:16      YES        144.0      221476     high       15.89 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WEBELSOLAR/3738113    NA:PNQ
+09:16      NO         28.0       60022      high       10.12 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SHILPAMED/4544513     NA:PNQ
+09:19      NO         34.0       59277      high       17.4  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GODAVARIB/6640897     NA:PNQ  (no gap up went up)
+09:20      NO         12.0       281625     high       9.25  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/JSLL/194077441        long:loss (huge gap up, sell down)
+09:21      NO         23.0       5611625    high       0.38  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KALYANKJIL/756481     NA:CTUC
+09:21      NO         47.0       1009435    high       15.11 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KTKBANK/2061825       long:loss (small gap uo constant)
+09:21      YES        9.0        30442      high       14.91 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DREDGECORP/2885377    NA:PNQ
+09:21      YES        7.0        116673     low        23.35 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CONCORDBIO/4623361    NA:PNQ
+09:23      NO         8.0        7822230    high       3.7   https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SBIN/779521           NA:CTUC
+09:23      YES        9.0        125982     high       2.46  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/POKARNA/4518657       NA:PNQ
+09:23      NO         21.0       51774      high       16.16 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GNA/4754177           NA:PNQ
+09:24      NO         69.0       2188258    high       11.82 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/STLTECH/2383105       long:loss(huge gap up ,sell down then up)
+09:24      NO         24.0       896073     high       8.83  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GOLDIAM/3064577       long:profit (only this did not went dwn)
+09:24      NO         28.0       64020      high       7.34  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/APOLLOPIPE/3676417     NA:PNQ
+09:25      YES        16.0       5504832    high       14.57 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HINDCOPPER/4592385     NA:PNQ
+09:26      NO         51.0       3507707    high       15.96 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MRPL/584449            NA:PNQ
+09:27      YES        95.0       7460508    low        22.33 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IDBI/377857            NA:PNQ
+09:27      NO         18.0       597055     high       18.22 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/JKTYRE/3695361         NA:PNQ
+09:27      NO         25.0       230455     high       7.45  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/JSFB/5801729           NA:PNQ (huge up then sell then up) 
+09:28      YES        54.0       115596     high       16.43 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WALCHANNAG/956417      NA:PNQ
+09:28      YES        26.0       401728     high       12.35 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/APEX/5535489           NA:PNQ
+09:30      YES        500.0      3867847    high       14.69 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HCC/352001             NA:PNQ
+09:31      NO         21.0       172317     high       4.83  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BALUFORGE/6043393      NA:PNQ
+09:31      NO         19.0       802846     high       7.27  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ATULAUTO/7685889       huge gap then sell down
+09:32      NO         37.0       1011859    high       13.04 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TARIL/3884545          small gap up ,resistance,up
+09:32      NO         5.0        718898     high       4.23  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GODREJPROP/4576001     small gap up , constant
+09:34      YES        4.0        476918     high       7.14  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MCX/7982337            NA:PNQ
+09:35      YES        40         369287     high       10.73 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/VAIBHAVGBL/2909185     NA:PNQ
+09:35      NO         51         1145260    high       14.5  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BLISSGVS/4931841       NA:PNQ
+09:35      YES        2500.0     12880241   high       14.86 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DAVANGERE/5579265      NA:LV
+09:36      NO         12.0       603322     high       4.29  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GOKEX/3015169          huge gap up then sell down 
+09:36      YES        400.0      6959738    high       17.35 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TATSILV/5485569        NA:PNQ
+09:36      NO         24.0       757856     high       4.75  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/OSWALPUMPS/193741313   NA:PNQ
+09:37      NO         2          40873      high       5.36  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/THANGAMAYL/4638209     NA:PNQ
+09:38      NO         26.0       70033      high       17.53 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SGFIN/194266369        NA:LV
+09:40      NO         2.0        570385     high       6.09  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KAYNES/3095553         small gap up ,resistance up
+09:40      YES        769.0      1434809    low        22.87 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/UTKARSHBNK/4443649     NA:PNQ
+09:40      YES        39.0       104124     high       17.98 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AGIIL/6257921          NA:PNQ
+
+09:41      NO         13.0       51112      high       13.39 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GANECOS/1777665
+09:49      NO         36.0       99840      high       0.5   https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BARBEQUE/800513
+09:50      NO         12.0       51798      high       8.69  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SPAL/4672513
+09:51      NO         19.0       259710     high       14.61 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KIRIINDUS/4259585
+09:53      YES        3.0        500000     high       14.56 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NETWEB/4462849
+09:55      YES        9.0        941541     high       13.41 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AVANTIFEED/2031617
+09:56      NO         35.0       2673454    high       12.59 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PFOCUS/3454977
+10:00      YES        1111.0     1930103    high       7.1   https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ZEEMEDIA/3584769
+10:00      NO         29         423810     high       13.66 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/STYLEBAAZA/6429185
+10:01      NO         18.0       124047     high       15.73 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BBOX/879361
+10:01      NO         39.0       2020549    high       6.33  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CROMPTON/4376065
+10:02      NO         39.0       1232170    high       4.29  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HUBTOWN/3635969
+10:02      NO         58.0       414717     high       13.33 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TBZ/6921473
+10:06      NO         11.0       172322     high       15.87 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WHIRLPOOL/4610817
+10:10      NO         158.0      5261213    high       15.13 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IFCI/381697
+10:11      NO         28.0       330021     high       13.06 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SAREGAMA/1252353
+10:13      YES        64.0       341304     high       17.2  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RATNAVEER/4716289
+10:14      YES        6.0        1091821    high       6.42  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/POLICYBZR/1703937
+
+10:15      NO         23         664076     high       14.31 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KPIGREEN/1307649        NA:PNQ
+10:15      YES        18.0       67215      high       13.66 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AWHCL/460033            NA:PNQ
+10:17      YES        80.0       846337     high       13.43 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DBREALTY/4639745        NA:PNQ
+10:24      NO         28.0       279632     high       10.41 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HPL/4781825             NA:PNQ
+10:33      NO         5          436486     high       7.76  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BLUESTARCO/2127617      NA:PNQ
+10:39      YES        3.0        45874      low        21.89 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ETHOSLTD/2496001        NA:PNQ
+10:39      NO         33.0       83049      high       4.71  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KSOLVES/2831361         NA:PNQ
+10:43      YES        16         794964     low        22.11 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HEXT/7594497            NA:PNQ
+10:45      NO         26.0       166148     high       16.38 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SGMART/194275585        NA:LV
+10:48      NO         333.0      2651738    high       12.29 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PATELENG/2994945        long:loss
+10:50      NO         20         442442     high       10.81 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ELECON/3492609          long:loss
+11:06      NO         136        30841      high       0.15  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BROOKS/6434817          NA:PNQ
+11:07      NO         25.0       395773     high       13.37 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ARVIND/49409            NA:PNQ
+11:09      NO         15.0       67067      high       16.98 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TMB/2801921             NA:PNQ
+11:12      YES        76.0       29551      high       17.06 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ROLEXRINGS/1351425      NA:PNQ 
+11:13      YES        45.0       207220     high       18.12 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SANDUMA/4699905         NA:PNQ
+11:20      YES        833.0      1047927    high       17.03 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/METAL/6590465           NA:PNQ
+11:25      NO         85.0       271023     high       5.04  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SPORTKING/2747649       NA:PNQ
+11:38      NO         17.0       41715      high       4.18  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SELAN/3481089           NA:PNQ
+11:39      NO         12.0       49829      high       6.76  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RPSGVENT/2078465        NA:PNQ
+11:42      NO         6.0        120372     high       11.15 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IMFA/4924161            long:loss
+11:44      NO         14.0       82689      high       11.39 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HGINFRA/428033          NA:PNQ
+11:46      NO         58.0       77145      high       18.46 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RNBDENIMS/194299137     NA:PNQ
+11:51      NO         714.0      2204093    high       10.44 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MOTISONS/5321729        NA:LV
+11:54      NO         37.0       149019     high       12.31 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PRECWIRE/695553         NA:PNQ
+12:01      NO         149.0      307364     high       17.33 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ANDHRAPAP/42497         NA:PNQ
+12:08      YES        151.0      898992     high       16.49 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MMTC/4596993            NA:PNQ
+12:26      NO         9          25421      high       15.94 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/LUXIND/2893057          NA:PNQ
+12:32      NO         9.0        41848      high       15.61 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/INDIGOPNTS/524289       NA:PNQ
+12:47      YES        33.0       824581     high       10.11 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PCBL/678145             NA:PNQ
+12:55      NO         113.0      76429      high       15.7  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SMCGLOBAL/593921        NA:PNQ
+13:28      NO         312.0      33122      high       0.0   https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/LEXUS/3701505           NA:PNQ
+13:35      YES        303        292492     high       13.7  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TRACXN/2964993          NA:PNQ
+13:41      NO         5          53148      high       15.34 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/VENKEYS/961793          NA:PNQ
+13:54      NO         104.0      113139     high       13.89 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BALAJITELE/2344449      NA:PNQ
+13:59      NO         15.0       888440     high       9.99  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ICICIPRULI/4774913      NA:PNQ
