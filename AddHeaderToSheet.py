@@ -17,7 +17,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(
 client = gspread.authorize(creds)
 
 SPREADSHEET_NAME = "Week 7 LOGS"
-WORKSHEET_NAME = "Feb10"  
+WORKSHEET_NAME = "Feb11"  
 
 HEADER = [
     "Time",

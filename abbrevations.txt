@@ -1,5 +1,5 @@
 CTUC   ----> Close to Upper Circut 
-PNQ    ----> Pattern Not Qualified 
+PNQ    ----> Pattern Not Qualified ,Nulti point Resistance
 LV     ----> Low Volume
 SS    ---->  Single Spike
 NE    ---->  No Entry
@@ -7,4 +7,6 @@ PAT    ----> Position Already Taken
 NEM   -----> Not Enough Movement (for short alteast 5% movement)
 TMM   -----> Too Much Movement (Long not after 12-15%)
 NIFTY -----> might skip 10 min depending on nigty chart
-PS --------> Potential Chart
+PS --------> Potential short
+SPR -------> single point resistance (3%) entry after one FVG
+GAPUP ------> If on gap up day wiht no momentum , price open 7% + then ignore

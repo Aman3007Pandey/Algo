@@ -15,7 +15,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(
 client = gspread.authorize(creds)
 
 SPREADSHEET_NAME = "Week 7 LOGS"
-WORKSHEET_NAME = "Feb10"  
+WORKSHEET_NAME = "Feb11 "  
 
 sh = client.open(SPREADSHEET_NAME)
 sheet = sh.worksheet(WORKSHEET_NAME)
@@ -43,13 +43,13 @@ def log_signal(
     ], value_input_option="USER_ENTERED")
 
 
-# log_signal(
-#      '19:17'  
-#     symbol="ROLEXRINGS",
-#     quantity="YES",
-#     resistance=75.0,
-#     vol_cutoff=29551,
-#     high_low="high",
-#     uc_percent=16.72,
-#     link="https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ROLEXRINGS/1351425"
-# )
+log_signal(
+     "19:17"  ,
+    symbol="ROLEXRINGS",
+    quantity="YES",
+    resistance=75.0,
+    vol_cutoff=29551,
+    high_low="high",
+    uc_percent=16.72,
+    link="https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ROLEXRINGS/1351425"
+)
