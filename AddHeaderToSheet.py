@@ -3,7 +3,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 from oauth2client.service_account import ServiceAccountCredentials
 from gspread.exceptions import SpreadsheetNotFound, WorksheetNotFound
-
+from datetime import datetime
 
 SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -16,8 +16,11 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(
 
 client = gspread.authorize(creds)
 
-SPREADSHEET_NAME = "Week 7 LOGS"
-WORKSHEET_NAME = "Feb11"  
+SPREADSHEET_NAME = "MARCH LOGS"
+
+
+now = datetime.now()
+WORKSHEET_NAME = now.strftime("%B ") + str(now.day)
 
 HEADER = [
     "Time",
@@ -27,6 +30,7 @@ HEADER = [
     "VolCutoff",
     "High/Low",
     "%UC",
+    "LV",
     "Link"
 ]
 
@@ -56,15 +60,15 @@ def get_or_create_sheet():
     return ws
 
 def force_text_columns(ws):
-    # Columns A to G → TEXT
-    ws.format("A:G", {
+    # Columns A to H → TEXT
+    ws.format("A:H", {
         "numberFormat": {
             "type": "TEXT"
         }
     })
 
     # Column H (Link) → URL (still works even as text)
-    ws.format("H:H", {
+    ws.format("I:I", {
         "numberFormat": {
             "type": "TEXT"
         }

@@ -8,7 +8,7 @@ import time
 from datetime import datetime
 from requests.exceptions import RequestException
 import urllib3
-from logToCSV2 import log_momentum_signal
+from logToCSV3 import log_momentum_signal
 import math
 import pytz
 import sys
@@ -140,10 +140,10 @@ while True:
                 link=zerodhaLink(symbol,token)
                 potential_gain = round(((c3["ucl"] - c3["close"]) / c3["close"]) * 100,2)
                 if  potential_gain<18.5 and turnover>4000 and dayHigh=="high" :
-                    log_momentum_signal(candle,avg_volume_of_this_stock,0,dayHigh,link,token)
+                    log_momentum_signal(candle,avg_volume_of_this_stock,0,dayHigh,link,token,count)
                     unusualVolumeSymbols.add(token)
                 elif potential_gain>21.5 and turnover>4000 and dayLow=="low" :
-                    log_momentum_signal(candle,avg_volume_of_this_stock,0,dayLow,link,token)
+                    log_momentum_signal(candle,avg_volume_of_this_stock,0,dayLow,link,token,count)
                     unusualVolumeSymbols.add(token)
 
                                   

@@ -35,6 +35,7 @@ def fetch_last_10_days_ohlc(token:int):
         # 2️⃣ Date range
         to_date = datetime.now(india).date()
         from_date = to_date - timedelta(days=10)
+        to_date=to_date-timedelta(days=1)
 
         # 3️⃣ Fetch historical data
         data = kite.historical_data(

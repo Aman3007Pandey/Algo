@@ -4,7 +4,7 @@ import pytz
 from historicalPrice import fetch_last_10_days_ohlc
 from logToSheet import log_signal
 
-def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token):
+def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token,count):
     """
     Logs a momentum signal to a readable text file.
     
@@ -29,7 +29,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token):
         
     qty = money // new_price    # floor quantity
 
-    SetupType='A+'
+    SetupType='SRT'
     (hisLow,hisHigh)=fetch_last_10_days_ohlc(token)
 
     if hisLow==None:
@@ -38,13 +38,18 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token):
         SetupType='PNQ'
     elif longorShort =='low' and (hisLow<(candle["close"] * 96) // 100):
         SetupType='PNQ'
-    elif longorShort =='high' and (hisHigh>(candle["close"] * 102) // 100):
+    elif longorShort =='high' and (hisHigh>(candle["close"] * 101) // 100):
         SetupType='SRT'
     elif longorShort =='low' and (hisLow<(candle["close"] * 98) // 100):
-        SetupType='SRT'                 
+        SetupType='SRT' 
+
+
+    lv='NO'
+    if (candle["cummulative_volume"]<50000+20000*(count-1)):
+        lv='YES'                    
 
     logTime=str(final_time.strftime("%H:%M"))
-    log_signal(logTime,candle['name'],qty,SetupType,vol_cutoff,longorShort,potential_gain,link)
+    log_signal(logTime,candle['name'],qty,SetupType,vol_cutoff,longorShort,potential_gain,lv,link)
     
 
 # def log_test_momentum_signal():

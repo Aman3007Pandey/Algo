@@ -1,13 +1,13 @@
 Time       Symbol       Quantity   VolCutoff  High/Low     %UC                              Link 
 09:17      GANDHAR      64         148507     low        27.93 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GANDHAR/5197569      NA:PNQ
 09:18      AWHCL        17.0       67215      high       17.98 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AWHCL/460033         NA:PNQ
-09:18      DBOL         96.0       86772      high       11.54 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DBOL/2788609         NA:NE
+09:18      DBOL         96.0       86772      high       11.54 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DBOL/2788609         NA:NE             low vol
 09:18      LANDMARK     26         89323      high       12.72 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/LANDMARK/3398657     NA:PNQ
-09:18      SELAN        19         41715      low        21.69 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SELAN/3481089        NA:PNQ                long:PL
+09:18      SELAN        19         41715      low        21.69 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SELAN/3481089        NA:PNQ                
 09:19      MCX          4          476918     high       6.27  https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MCX/7982337          NA:PNQ
 09:20      RMDRIP       97.0       42901      high       18.45 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RMDRIP/194005505     NA:LV
-09:23      KARURVYSYA   35.0       1926256    high       14.89 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KARURVYSYA/470529    NA:PNQ(SAD)
-09:23      HOMEFIRST    8.0        349393     high       13.88 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HOMEFIRST/526337     long:profit
+09:23      KARURVYSYA   35.0       1926256    high       14.89 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KARURVYSYA/470529    NA:PNQ(SAD)       srt,A+
+09:23      HOMEFIRST    8.0        349393     high       13.88 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HOMEFIRST/526337     long:profit       srt,NE
 09:24      IFBIND       8.0        93178      low        40.93 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IFBIND/380161        NA:PNQ                short:PS
 09:24      DCBBANK      51.0       1414703    high       13.31 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DCBBANK/3513601      NA:PNQ
 09:29      BALAMINES    8          43980      high       18.18 https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BALAMINES/3712257    NA:PNQ
