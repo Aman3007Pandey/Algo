@@ -16,7 +16,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(
 
 client = gspread.authorize(creds)
 
-SPREADSHEET_NAME = "APRIL LOGS"
+SPREADSHEET_NAME = "MAY LOGS"
 
 
 now = datetime.now()

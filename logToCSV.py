@@ -46,21 +46,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,current_volume,turnover,da
     qty = money // new_price    # floor quantity
 
 
-    # if not os.path.exists(LOG_FILE):
-    #     with open(LOG_FILE, "w") as f:
-    #         f.write(f"{'Time':<20} {'Symbol':<12} {'Volume':<10} {'VolCutoff':<10}" f"{'Criteria':<10} {'turnover':<10} {'Days High':<9} {'%UC':<5} \n")
-    # with open(LOG_FILE, "a") as f:
-    #     f.write(
-    #         f"{final_time.strftime('%Y-%m-%d %H:%M:%S'):<20} "
-    #         f"{candle['name']:<12} "
-    #         f"{current_volume:<10} "
-    #         f"{vol_cutoff:<10}"
-    #         f"{criteria:<10}"
-    #         f"{turnover:<11}"
-    #         f"{dayHighorLow if dayHighorLow is not None else 'NA':<9}"
-    #         f"{potential_gain:<5}\n"
-    #         # f"{'LOW VOLUME' if avg_volume_of_this_stock < 150_000 else ''}\n"
-    #     )
+    
 
 
     if not os.path.exists(LOG_FILE):

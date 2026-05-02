@@ -32,7 +32,7 @@ jobs:
 
       - name: Run your Python script
         run: |
-          python test4.py
+          python cloud.py
 
       - name: Upload log files
         if: always()   # ensures upload even if the script fails

@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 import os
 import pytz
 from historicalPrice import fetch_last_10_days_ohlc
-from logToSheet import log_signal,log_signal2
+from logToSheet import log_signal2
 
 def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token,count):
     """
@@ -50,7 +50,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token,cou
 
     if vol_cutoff>100000:
         logTime=str(final_time.strftime("%H:%M"))
-        log_signal(logTime,candle['name'],qty,SetupType,vol_cutoff,longorShort,potential_gain,lv,link)
+        log_signal2(logTime,candle['name'],qty,SetupType,vol_cutoff,longorShort,potential_gain,lv,link)
     
 
 # def log_test_momentum_signal():

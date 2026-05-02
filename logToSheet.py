@@ -1,9 +1,11 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
+import os
 import requests
 import time
 
+LOG_FOLDER = "today_logs"
 
 SCOPE = [
     "https://spreadsheets.google.com/feeds",
@@ -16,7 +18,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(
 
 client = gspread.authorize(creds)
 
-SPREADSHEET_NAME = "APRIL LOGS"
+SPREADSHEET_NAME = "MAY LOGS"
 now = datetime.now()
 WORKSHEET_NAME = now.strftime("%B ") + str(now.day)
 
@@ -89,3 +91,46 @@ def log_signal(
 #     lv="YES"
 #     link="https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ROLEXRINGS/1351425"
 # )
+
+
+def log_signal2(
+    finalTime,
+    symbol,
+    quantity,
+    resistance,
+    vol_cutoff,
+    high_low,
+    uc_percent,
+    lv,
+    link
+):
+    os.makedirs(LOG_FOLDER, exist_ok=True)
+    log_file = os.path.join(LOG_FOLDER, f"{datetime.now().strftime('%Y-%m-%d')}_MAY_LOGS.log")
+
+    time_value = (
+        finalTime.strftime('%H:%M')
+        if isinstance(finalTime, datetime)
+        else str(finalTime)
+    )
+
+    if not os.path.exists(log_file):
+        with open(log_file, "w", encoding="utf-8") as f:
+            f.write(
+                f"{'Time':<10} {'Symbol':<12} {'Quantity':<10} {'Resistance':<12} "
+                f"{'VolCutoff':<10} {'High/Low':<12} {'%UC':<8} {'LV':<8} {'Link'}\n"
+            )
+
+    with open(log_file, "a", encoding="utf-8") as f:
+        f.write(
+            f"{time_value:<10} "
+            f"{symbol:<12} "
+            f"{quantity:<10} "
+            f"{resistance:<12} "
+            f"{vol_cutoff:<10} "
+            f"{high_low:<12} "
+            f"{uc_percent:<8} "
+            f"{lv:<8} "
+            f"{link}\n"
+        )
+
+   

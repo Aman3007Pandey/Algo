@@ -8,7 +8,7 @@ import time
 from datetime import datetime
 from requests.exceptions import RequestException
 import urllib3
-from logToCSV3 import log_momentum_signal
+from logToCSV4 import log_momentum_signal
 import math
 import pytz
 import sys
