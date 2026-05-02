@@ -2,7 +2,8 @@ from datetime import datetime, timedelta
 import os
 import pytz
 from historicalPrice import fetch_last_10_days_ohlc
-from logToSheet import log_signal2
+
+LOG_FOLDER = "today_logs"
 
 def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token,count):
     """
@@ -86,3 +87,45 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token,cou
 #     log_momentum_signal(candle5,4144141,0,"high","zerodha/link/"+candle5["name"],4592385)
 
 # log_test_momentum_signal()
+
+
+
+def log_signal2(
+    finalTime,
+    symbol,
+    quantity,
+    resistance,
+    vol_cutoff,
+    high_low,
+    uc_percent,
+    lv,
+    link
+):
+    os.makedirs(LOG_FOLDER, exist_ok=True)
+    log_file = os.path.join(LOG_FOLDER, f"{datetime.now().strftime('%Y-%m-%d')}_MAY_LOGS.log")
+
+    time_value = (
+        finalTime.strftime('%H:%M')
+        if isinstance(finalTime, datetime)
+        else str(finalTime)
+    )
+
+    if not os.path.exists(log_file):
+        with open(log_file, "w", encoding="utf-8") as f:
+            f.write(
+                f"{'Time':<10} {'Symbol':<12} {'Quantity':<10} {'Resistance':<12} "
+                f"{'VolCutoff':<10} {'High/Low':<12} {'%UC':<8} {'LV':<8} {'Link'}\n"
+            )
+
+    with open(log_file, "a", encoding="utf-8") as f:
+        f.write(
+            f"{time_value:<10} "
+            f"{symbol:<12} "
+            f"{quantity:<10} "
+            f"{resistance:<12} "
+            f"{vol_cutoff:<10} "
+            f"{high_low:<12} "
+            f"{uc_percent:<8} "
+            f"{lv:<8} "
+            f"{link}\n"
+        )
