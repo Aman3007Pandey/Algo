@@ -1,4 +1,4 @@
-name: Run test3.py (KiteConnect bot)
+name: Run cloud.py (KiteConnect bot)
 
 on:
   workflow_dispatch:
