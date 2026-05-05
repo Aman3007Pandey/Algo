@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 import os
 import pytz
 from historicalPrice import fetch_last_10_days_ohlc
-from logToSheet import log_signal,log_signal2
+from logToSheet import log_signal
 
 def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token,count):
     """
@@ -33,7 +33,7 @@ def log_momentum_signal(candle, vol_cutoff,fileSuffix,longorShort,link,token,cou
     (hisLow,hisHigh)=fetch_last_10_days_ohlc(token)
 
     if hisLow==None:
-        SetupType='Historical Failed'
+        SetupType='HistoricalFailed'
     elif longorShort =='high' and  ( hisHigh>(candle["close"] * 104) // 100 ):
         SetupType='PNQ'
     elif longorShort =='low' and (hisLow<(candle["close"] * 96) // 100):

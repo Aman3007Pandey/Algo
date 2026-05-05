@@ -1,0 +1,44 @@
+Time       Symbol       Quantity   Resistance   VolCutoff  High/Low     %UC      LV       Link
+09:16      WEBELSOLAR   81.0       PNQ          221476     high         0.0      NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WEBELSOLAR/3738113
+09:16      TATATECH     15.0       SRT          780495     high         13.08    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TATATECH/5195009
+09:17      SUNFLAG      28.0       SRT          268575     high         9.06     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SUNFLAG/857089
+09:17      WOCKPHARMA   6.0        SRT          407239     high         11.31    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WOCKPHARMA/1921537
+09:17      SOBHA        6.0        SRT          162391     high         10.29    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SOBHA/3539457
+09:17      IDEAFORGE    12.0       SRT          547599     high         2.72     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/IDEAFORGE/4387841
+09:18      SCI          30.0       SRT          1621266    high         17.74    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/SCI/780289
+09:24      HFCL         77.0       SRT          12489220   high         17.71    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HFCL/5619457
+09:25      ADANIPOWER   43.0       SRT          4874342    high         9.06     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ADANIPOWER/4451329
+09:27      BHEL         25.0       SRT          6872759    high         7.95     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/BHEL/112129
+09:28      PETRONET     34.0       SRT          1658613    high         6.57     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/PETRONET/2905857
+09:28      NETWEB       2.0        SRT          500000     high         14.31    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NETWEB/4462849
+09:29      HCC          434.0      SRT          3867847    high         16.41    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HCC/352001
+09:32      VEDL         33.0       PNQ          7832775    high         9.64     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/VEDL/784129
+09:33      CUPID        76.0       SRT          4993749    high         17.86    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CUPID/4741121
+09:34      STLTECH      30.0       SRT          2188258    high         0.43     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/STLTECH/2383105
+09:36      RKFORGE      15         SRT          471273     high         17.69    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RKFORGE/2921217
+09:36      ABCAPITAL    27.0       SRT          5177742    high         6.05     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ABCAPITAL/5533185
+09:40      NUVAMA       7.0        PNQ          134022     high         9.34     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/NUVAMA/4792577
+09:48      DATAPATTNS   2          Historical Failed 284369     high         17.93    YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/DATAPATTNS/1883649
+09:51      AGIIL        25.0       PNQ          104124     low          24.89    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AGIIL/6257921
+09:54      ATHERENERG   10.0       PNQ          3139937    low          21.52    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ATHERENERG/193957121
+09:56      LLOYDSME     5.0        SRT          289585     high         18.09    YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/LLOYDSME/4432129
+10:00      MANAPPURAM   32.0       SRT          3883529    high         9.65     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MANAPPURAM/4879617
+10:02      GRSE         3          PNQ          1117482    high         15.8     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GRSE/1401601
+10:03      AMBUJACEM    22.0       PNQ          3165373    high         11.64    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/AMBUJACEM/325121
+10:09      RPOWER       344.0      Historical Failed 15282667   high         17.56    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RPOWER/3906305
+10:10      APOLLOTYRE   24         SRT          911205     low          21.61    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/APOLLOTYRE/41729
+10:22      GVT&D        2.0        Historical Failed 493562     high         17.55    YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/GVT&D/4296449
+11:03      KOTAKBANK    26.0       SRT          3474018    high         9.09     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KOTAKBANK/492033
+11:29      CAMS         12.0       SRT          340743     high         2.25     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CAMS/87553
+11:33      ANGELONE     31.0       SRT          965804     high         7.05     YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ANGELONE/82945
+12:13      CREDITACC    6          SRT          432729     high         9.56     YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/CREDITACC/1131777
+12:20      KEI          1          SRT          244649     high         10.62    YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/KEI/3407361
+12:20      RRKABEL      5          SRT          114825     high         18.21    YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/RRKABEL/4752897
+12:25      QUESS        42.0       SRT          270423     high         7.77     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/QUESS/4532225
+12:28      HSCL         16.0       PNQ          996126     high         18.46    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/HSCL/3669505
+12:45      TITAGARH     11.0       Historical Failed 1657653    high         11.48    YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/TITAGARH/3945985
+12:55      MAHABANK     121.0      SRT          6507294    high         17.15    NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/MAHABANK/2912513
+13:01      JWL          33.0       Historical Failed 2561544    high         15.84    YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/JWL/5177345
+13:21      YESBANK      476.0      SRT          77922306   high         5.38     NO       https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/YESBANK/3050241
+13:27      ADANIENSOL   7.0        PNQ          1598740    high         9.39     YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/ADANIENSOL/2615553
+14:11      WELENT       19.0       SRT          213087     low          21.59    YES      https://kite.zerodha.com/markets/ext/chart/web/tvc/NSE/WELENT/2976257
